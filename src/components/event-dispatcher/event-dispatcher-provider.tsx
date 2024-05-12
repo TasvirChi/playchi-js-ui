@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-use-before-define */
-import {FakeEvent} from '@playkit-js/playkit-js';
+import {FakeEvent} from '@playchi-js/playchi-js';
 import {EventType} from '../../event';
 import {AudioSelectedEvent} from '../../event/events/audio-selected-event';
 import {CaptionSelectedEvent} from '../../event/events/caption-selected-event';
@@ -13,7 +13,7 @@ import {ForwardClickedEvent} from '../../event/events/forward-clicked';
 import {VolumeChangedEvent} from '../../event/events/volume-changed';
 import {KeyMap} from '../../utils';
 import {Component, toChildArray} from 'preact';
-import {KalturaPlayer} from '@playkit-js/kaltura-player-js';
+import {TasvirchiPlayer} from '@playchi-js/tasvirchi-player-js';
 
 /**
  * PlayerProvider component
@@ -75,7 +75,7 @@ export {EventDispatcherProvider};
  * @param {Object} player - The video player.
  * @returns {void}
  */
-function onPlayerHoverStateChangeHandler(store: any, action: any, player: KalturaPlayer): void {
+function onPlayerHoverStateChangeHandler(store: any, action: any, player: TasvirchiPlayer): void {
   const engineState = store.getState().engine;
   const shellState = store.getState().shell;
   if (!engineState.adBreak && engineState.isPlaying && shellState.playerHover !== action.payload.hover) {
@@ -90,7 +90,7 @@ function onPlayerHoverStateChangeHandler(store: any, action: any, player: Kaltur
  * @param {Object} player - The video player.
  * @returns {void}
  */
-function onChangeableComponentsHandler(store: any, action: any, player: KalturaPlayer): void {
+function onChangeableComponentsHandler(store: any, action: any, player: TasvirchiPlayer): void {
   switch (action.name) {
     case 'Volume':
       player.dispatchEvent(new VolumeChangedEvent(action.payload.volume));
@@ -120,7 +120,7 @@ function onChangeableComponentsHandler(store: any, action: any, player: KalturaP
  * @param {Object} player - The video player.
  * @returns {void}
  */
-function onClickableComponentsHandler(store: any, action: any, player: KalturaPlayer): void {
+function onClickableComponentsHandler(store: any, action: any, player: TasvirchiPlayer): void {
   switch (action.name) {
     case 'Keyboard':
       keyboardHandlers[action.payload.key](store, action, player);
@@ -203,7 +203,7 @@ function onClickableComponentsHandler(store: any, action: any, player: KalturaPl
  * @param {Object} player - The video player.
  * @returns {void}
  */
-function onPlayPauseClicked(store: any, action: any, player: KalturaPlayer): void {
+function onPlayPauseClicked(store: any, action: any, player: TasvirchiPlayer): void {
   const engineState = store.getState().engine;
   if (engineState.adBreak) {
     engineState.adIsPlaying
@@ -223,7 +223,7 @@ function onPlayPauseClicked(store: any, action: any, player: KalturaPlayer): voi
  * @param {Object} player - The video player.
  * @returns {void}
  */
-function onVolumeClicked(store: any, action: any, player: KalturaPlayer): void {
+function onVolumeClicked(store: any, action: any, player: TasvirchiPlayer): void {
   const engineState = store.getState().engine;
   engineState.muted
     ? player.dispatchEvent(new FakeEvent(EventType.USER_CLICKED_MUTE))
@@ -237,7 +237,7 @@ function onVolumeClicked(store: any, action: any, player: KalturaPlayer): void {
  * @param {Object} player - The video player.
  * @returns {void}
  */
-function onCaptionsClick(store: any, action: any, player: KalturaPlayer): void {
+function onCaptionsClick(store: any, action: any, player: TasvirchiPlayer): void {
   if (action.payload.type === player.Track.TEXT) {
     player.dispatchEvent(new CaptionSelectedEvent(action.payload.track));
   }
@@ -250,7 +250,7 @@ function onCaptionsClick(store: any, action: any, player: KalturaPlayer): void {
  * @param {Object} player - The video player.
  * @returns {void}
  */
-function onAudioClicked(store: any, action: any, player: KalturaPlayer): void {
+function onAudioClicked(store: any, action: any, player: TasvirchiPlayer): void {
   if (action.payload.type === player.Track.AUDIO) {
     player.dispatchEvent(new AudioSelectedEvent(action.payload.track));
   }
@@ -263,7 +263,7 @@ function onAudioClicked(store: any, action: any, player: KalturaPlayer): void {
  * @param {Object} player - The video player.
  * @returns {void}
  */
-function onQualityClicked(store: any, action: any, player: KalturaPlayer): void {
+function onQualityClicked(store: any, action: any, player: TasvirchiPlayer): void {
   if (action.payload.type === player.Track.VIDEO) {
     player.dispatchEvent(new QualitySelectedEvent(action.payload.track));
   }
@@ -276,7 +276,7 @@ function onQualityClicked(store: any, action: any, player: KalturaPlayer): void 
  * @param {Object} player - The video player.
  * @returns {void}
  */
-function onSpeedClicked(store: any, action: any, player: KalturaPlayer): void {
+function onSpeedClicked(store: any, action: any, player: TasvirchiPlayer): void {
   if (action.payload.type === 'speed') {
     player.dispatchEvent(new SpeedSelectedEvent(action.payload.speed));
   }
@@ -289,7 +289,7 @@ function onSpeedClicked(store: any, action: any, player: KalturaPlayer): void {
  * @param {Object} player - The video player.
  * @returns {void}
  */
-function onAdvancedAudioDescriptionClicked(store: any, action: any, player: KalturaPlayer): void {
+function onAdvancedAudioDescriptionClicked(store: any, action: any, player: TasvirchiPlayer): void {
   if (action.payload.type === 'AdvancedAudioDescription') {
     player.dispatchEvent(new FakeEvent(EventType.USER_CLICKED_ADVANCED_AUDIO_DESCRIPTION, action.payload));
   }
@@ -302,7 +302,7 @@ function onAdvancedAudioDescriptionClicked(store: any, action: any, player: Kalt
  * @param {Object} player - The video player.
  * @returns {void}
  */
-function onFullScreenClicked(store: any, action: any, player: KalturaPlayer): void {
+function onFullScreenClicked(store: any, action: any, player: TasvirchiPlayer): void {
   player.isFullscreen()
     ? player.dispatchEvent(new FakeEvent(EventType.USER_EXITED_FULL_SCREEN))
     : player.dispatchEvent(new FakeEvent(EventType.USER_ENTERED_FULL_SCREEN));
@@ -315,7 +315,7 @@ function onFullScreenClicked(store: any, action: any, player: KalturaPlayer): vo
  * @param {Object} player - The video player.
  * @returns {void}
  */
-function onPictureInPictureClicked(store: any, action: any, player: KalturaPlayer): void {
+function onPictureInPictureClicked(store: any, action: any, player: TasvirchiPlayer): void {
   player.isInPictureInPicture()
     ? player.dispatchEvent(new FakeEvent(EventType.USER_EXITED_PICTURE_IN_PICTURE))
     : player.dispatchEvent(new FakeEvent(EventType.USER_ENTERED_PICTURE_IN_PICTURE));
@@ -328,7 +328,7 @@ function onPictureInPictureClicked(store: any, action: any, player: KalturaPlaye
  * @param {Object} player - The video player.
  * @returns {void}
  */
-function onOverlayActionClicked(store: any, action: any, player: KalturaPlayer): void {
+function onOverlayActionClicked(store: any, action: any, player: TasvirchiPlayer): void {
   if (action.payload.type === 'PlayPause') {
     onPlayPauseClicked(store, action, player);
   } else if (action.payload.type === 'Fullscreen') {
@@ -343,7 +343,7 @@ function onOverlayActionClicked(store: any, action: any, player: KalturaPlayer):
  * @param {Object} player - The video player.
  * @returns {void}
  */
-function onClosedCaptionsClicked(store: any, action: any, player: KalturaPlayer): void {
+function onClosedCaptionsClicked(store: any, action: any, player: TasvirchiPlayer): void {
   const {payload: ccOn} = action;
   ccOn ? player.dispatchEvent(new FakeEvent(EventType.USER_HID_CAPTIONS)) : player.dispatchEvent(new FakeEvent(EventType.USER_SHOWED_CAPTIONS));
 }

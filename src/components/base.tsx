@@ -1,8 +1,8 @@
 import {Component, RenderableProps, ComponentChild} from 'preact';
 import getLogger from '../utils/logger';
 import {types} from '../middlewares/event-dispatcher';
-import {EventManager} from '@playkit-js/playkit-js';
-import {KalturaPlayer} from '@playkit-js/kaltura-player-js';
+import {EventManager} from '@playchi-js/playchi-js';
+import {TasvirchiPlayer} from '@playchi-js/tasvirchi-player-js';
 
 /**
  * Base component to be extended by other player UI components
@@ -11,7 +11,7 @@ import {KalturaPlayer} from '@playkit-js/kaltura-player-js';
  * @extends {Component}
  */
 class BaseComponent extends Component<any, any> {
-  protected player: KalturaPlayer;
+  protected player: TasvirchiPlayer;
   protected name: string;
   protected config: any;
   protected logger: any;

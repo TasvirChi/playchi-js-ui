@@ -8,13 +8,13 @@ import {actions as SeekbarActions} from '../../reducers/seekbar';
 import {withPlayer} from '../player';
 import {withEventManager} from '../../event';
 import {withLogger} from '../logger';
-import {KalturaPlayer} from '@playkit-js/kaltura-player-js';
-import {EventManager} from '@playkit-js/playkit-js';
+import {TasvirchiPlayer} from '@playchi-js/tasvirchi-player-js';
+import {EventManager} from '@playchi-js/playchi-js';
 import {EngineState} from '../../types/reducers/engine';
 
 type EngineConnectorProps = {
   engine: EngineState;
-  player: KalturaPlayer;
+  player: TasvirchiPlayer;
   eventManager: EventManager;
 } & typeof EngineActions &
   typeof LoadingActions &

@@ -28,9 +28,9 @@ import './styles/style.scss';
 import {EventDispatcherProvider} from './components';
 import {KeyboardEventProvider} from './components';
 import {ThemesManager} from './utils/themes-manager';
-import {KPUIAddComponent, KPUIComponent, UIOptionsObject, UIPreset} from './types';
+import {TPUIAddComponent, TPUIComponent, UIOptionsObject, UIPreset} from './types';
 import {RootState} from './types';
-import {KalturaPlayer} from '@playkit-js/kaltura-player-js';
+import {TasvirchiPlayer} from '@playchi-js/tasvirchi-player-js';
 
 /**
  * API used for building UIs based on state conditions
@@ -38,13 +38,13 @@ import {KalturaPlayer} from '@playkit-js/kaltura-player-js';
  * @class UIManager
  */
 class UIManager {
-  player: KalturaPlayer;
+  player: TasvirchiPlayer;
   targetId: string;
   store!: Store<RootState, any>;
   container!: HTMLDivElement;
   _translations: {[langKey: string]: any} = {en: en_translations['en']};
   _locale: string = 'en';
-  _uiComponents: Array<KPUIComponent>;
+  _uiComponents: Array<TPUIComponent>;
   _themesManager: ThemesManager;
 
   /**
@@ -93,11 +93,11 @@ class UIManager {
   /**
    * Add a component dynamically
    *
-   * @param {KPUIComponent} component - The component to add
+   * @param {TPUIComponent} component - The component to add
    * @returns {Function} - Removal function
    * @memberof UIManager
    */
-  addComponent(component: KPUIAddComponent): () => void {
+  addComponent(component: TPUIAddComponent): () => void {
     return () => {};
   }
 

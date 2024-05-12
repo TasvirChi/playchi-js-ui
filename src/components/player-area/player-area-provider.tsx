@@ -2,12 +2,12 @@ import {Component, h, Fragment} from 'preact';
 import {connect} from 'react-redux';
 import {withLogger, WithLoggerProps} from '../logger';
 import {StylesStoreAdapter} from './styles-store-adapter';
-import {KPUIAddComponent, KPUIComponent} from '../../types';
+import {TPUIAddComponent, TPUIComponent} from '../../types';
 
 type PlayerAreaProviderProps = {
   activePresetName?: string;
-  setApi: (fn: (componentData: KPUIAddComponent) => () => void) => void;
-  uiComponents: KPUIComponent[];
+  setApi: (fn: (componentData: TPUIAddComponent) => () => void) => void;
+  uiComponents: TPUIComponent[];
 };
 
 type ComponentListener = {
@@ -35,7 +35,7 @@ const mapStateToProps = state => ({
 @connect(mapStateToProps)
 class PlayerAreaProvider extends Component<WithLoggerProps & PlayerAreaProviderProps, any> {
   private _listeners: ComponentListener[];
-  private _componentsByPreset: Record<string, KPUIAddComponent[]>;
+  private _componentsByPreset: Record<string, TPUIAddComponent[]>;
   /**
    * constructor
    * @return {void}
@@ -91,7 +91,7 @@ class PlayerAreaProvider extends Component<WithLoggerProps & PlayerAreaProviderP
    * @returns {boolean} - is valid
    * @private
    */
-  _validateComponentData = (componentData: KPUIAddComponent) => {
+  _validateComponentData = (componentData: TPUIAddComponent) => {
     // we keep option `container` for backward compatibility. documentation are showing `area` property
     const hasAreaProperty = componentData.container || componentData.area;
     if (!componentData.get || !componentData.presets || !hasAreaProperty) {
@@ -109,7 +109,7 @@ class PlayerAreaProvider extends Component<WithLoggerProps & PlayerAreaProviderP
    * @returns {function} - remove function
    * @private
    */
-  _addNewComponentAndUpdateListeners: (componentData: KPUIAddComponent) => () => void = (componentData: KPUIAddComponent): (() => void) => {
+  _addNewComponentAndUpdateListeners: (componentData: TPUIAddComponent) => () => void = (componentData: TPUIAddComponent): (() => void) => {
     return this._addNewComponent(componentData, true);
   };
 
@@ -119,7 +119,7 @@ class PlayerAreaProvider extends Component<WithLoggerProps & PlayerAreaProviderP
    * @returns {function} - remove function
    * @private
    */
-  _addNewComponent = (componentData: KPUIAddComponent, shouldUpdateImmediately: boolean): (() => void) => {
+  _addNewComponent = (componentData: TPUIAddComponent, shouldUpdateImmediately: boolean): (() => void) => {
     // use cloned component just in case someone will mutate the object in another place
     const clonedComponentData = Object.assign({}, componentData);
     if (clonedComponentData.container) {
@@ -151,7 +151,7 @@ class PlayerAreaProvider extends Component<WithLoggerProps & PlayerAreaProviderP
    * @returns {void}
    * @private
    */
-  _removeNewComponent = (componentData: KPUIAddComponent) => {
+  _removeNewComponent = (componentData: TPUIAddComponent) => {
     if (!this._validateComponentData(componentData)) {
       return;
     }

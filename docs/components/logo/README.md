@@ -40,9 +40,9 @@ Component that renders a logo image in the bottom bar area
 
 ## Player configuration
 
-> This guide assumes you are using the [Kaltura Player]
+> This guide assumes you are using the [Tasvirchi Player]
 
-[kaltura player]: https://github.com/kaltura/kaltura-player-js/
+[tasvirchi player]: https://github.com/tasvirchi/tasvirchi-player-js/
 
 ```js
 const config = {
@@ -59,5 +59,5 @@ const config = {
     ...
 }
 
-const player = KalturaPlayer.setup(config);
+const player = TasvirchiPlayer.setup(config);
 ```

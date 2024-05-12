@@ -1,5 +1,5 @@
 /* eslint-disable   @typescript-eslint/no-use-before-define */
-import {FakeEvent} from '@playkit-js/playkit-js';
+import {FakeEvent} from '@playchi-js/playchi-js';
 import {types as shell} from '../reducers/shell';
 import {AudioSelectedEvent} from '../event/events/audio-selected-event';
 import {CaptionSelectedEvent} from '../event/events/caption-selected-event';

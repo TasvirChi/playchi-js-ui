@@ -13,7 +13,7 @@ A component that changes the seekbar state.
 ## Usage Example
 
 ```html
-//@flow import { h, SeekBar } from 'playkit-js-ui'; export default function customUIPreset(props: any) { return ( // show both frame preview and time
+//@flow import { h, SeekBar } from 'playchi-js-ui'; export default function customUIPreset(props: any) { return ( // show both frame preview and time
 bubble
 <SeekBar showFramePreview showTimeBubble />
 

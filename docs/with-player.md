@@ -12,9 +12,9 @@ Let's see an example:
 > This sample will create red button which, when clicked, reads the current time from player and prints it out to console.
 
 ```javascript
-const h = KalturaPlayer.ui.h;
-const withPlayer = KalturaPlayer.ui.components.withPlayer;
-const Component = KalturaPlayer.ui.preact.Component;
+const h = TasvirchiPlayer.ui.h;
+const withPlayer = TasvirchiPlayer.ui.components.withPlayer;
+const Component = TasvirchiPlayer.ui.preact.Component;
 
 class SampleComponent extends Component {
   componentDidMount() {
@@ -50,9 +50,9 @@ export default withPlayer(SampleComponent);
 If you want to use JSX follow this [guide](./custom-ui-preset.md#using-jsx), and use following JSX syntax:
 
 ```javascript
-const h = KalturaPlayer.ui.h;
-const withPlayer = KalturaPlayer.ui.components.withPlayer;
-const Component = KalturaPlayer.ui.preact.Component;
+const h = TasvirchiPlayer.ui.h;
+const withPlayer = TasvirchiPlayer.ui.components.withPlayer;
+const Component = TasvirchiPlayer.ui.preact.Component;
 
 class DumbComponent extends Component {
   render(props) {
@@ -79,9 +79,9 @@ export default withPlayer(DumbComponent);
 And if you want to use it as a decorator:
 
 ```javascript
-const h = KalturaPlayer.ui.h;
-const withPlayer = KalturaPlayer.ui.components.withPlayer;
-const Component = KalturaPlayer.ui.preact.Component;
+const h = TasvirchiPlayer.ui.h;
+const withPlayer = TasvirchiPlayer.ui.components.withPlayer;
+const Component = TasvirchiPlayer.ui.preact.Component;
 
 @withPlayer
 class DumbComponent extends Component {
@@ -108,7 +108,7 @@ export default DumbComponent;
 The usage of this component will be:
 
 ```javascript
-const h = KalturaPlayer.ui.h;
+const h = TasvirchiPlayer.ui.h;
 h(DumbComponent, null, h('p', null, 'You can add here any components and html you want and it will be appended to the DumbComponent'));
 ```
 

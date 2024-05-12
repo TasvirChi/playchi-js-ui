@@ -3,9 +3,9 @@
 
 in order to override the player default colors you can pass your own color (in HEX color format!) in the `ui` section in player config
 
-> This guide assumes you are using the [Kaltura Player]
+> This guide assumes you are using the [Tasvirchi Player]
 
-[kaltura player]: https://github.com/kaltura/kaltura-player-js/
+[tasvirchi player]: https://github.com/tasvirchi/tasvirchi-player-js/
 
 ### Example
 ```js
@@ -27,11 +27,11 @@ const config = {
   }
 }
 
-const player = KalturaPlayer.setup(config);
+const player = TasvirchiPlayer.setup(config);
 ```
 > Note: only HEX color format is excepted
 
-[See here for full configuration options](https://github.com/kaltura/playkit-js-ui/tree/master/flow-typed/types/user-theme.js)
+[See here for full configuration options](https://github.com/tasvirchi/playchi-js-ui/tree/master/flow-typed/types/user-theme.js)
 
 ## Default Color Palette
 

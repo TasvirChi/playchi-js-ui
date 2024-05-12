@@ -1,5 +1,5 @@
 import {h, Component, ComponentChild} from 'preact';
-import {EventManager} from '@playkit-js/playkit-js';
+import {EventManager} from '@playchi-js/playchi-js';
 
 export type WithEventManagerProps = {
   eventManager?: EventManager;

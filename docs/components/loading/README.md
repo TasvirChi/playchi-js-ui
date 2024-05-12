@@ -11,7 +11,7 @@ Component that shows black overlay with loading spinner when player is not in `i
 ## Usage Example
 
 ```html
-//@flow import { h, Loading } from 'playkit-js-ui'; export default function customUIPreset(props: any) { return (
+//@flow import { h, Loading } from 'playchi-js-ui'; export default function customUIPreset(props: any) { return (
 <Loading />
 ) }
 ```

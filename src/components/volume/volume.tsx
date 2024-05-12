@@ -18,7 +18,7 @@ import {ToolTipType} from '../tooltip';
 import {Button} from '../button';
 import {ButtonControl} from '../button-control';
 import {KeyboardEventHandlers} from '../../types';
-import {FakeEvent} from '@playkit-js/playkit-js';
+import {FakeEvent} from '@playchi-js/playchi-js';
 
 /**
  * mapping state to props

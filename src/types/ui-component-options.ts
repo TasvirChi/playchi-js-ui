@@ -1,4 +1,4 @@
-export interface KPUIComponentOptions {
+export interface TPUIComponentOptions {
   label: string;
   presets: Array<string>;
   area: string;

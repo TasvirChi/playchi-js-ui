@@ -1,15 +1,15 @@
-# PlayKit JS UI - UI Application Framework for the [PlayKit JS Player]
+# PlayChi JS UI - UI Application Framework for the [PlayChi JS Player]
 
-[![Build Status](https://github.com/kaltura/playkit-js-ui/actions/workflows/run_canary_full_flow.yaml/badge.svg)](https://github.com/kaltura/playkit-js-ui/actions/workflows/run_canary_full_flow.yaml)
+[![Build Status](https://github.com/tasvirchi/playchi-js-ui/actions/workflows/run_canary_full_flow.yaml/badge.svg)](https://github.com/tasvirchi/playchi-js-ui/actions/workflows/run_canary_full_flow.yaml)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
-[![](https://img.shields.io/npm/v/@playkit-js/playkit-js-ui/latest.svg)](https://www.npmjs.com/package/@playkit-js/playkit-js-ui)
-[![](https://img.shields.io/npm/v/@playkit-js/playkit-js-ui/canary.svg)](https://www.npmjs.com/package/@playkit-js/playkit-js-ui/v/canary)
+[![](https://img.shields.io/npm/v/@playchi-js/playchi-js-ui/latest.svg)](https://www.npmjs.com/package/@playchi-js/playchi-js-ui)
+[![](https://img.shields.io/npm/v/@playchi-js/playchi-js-ui/canary.svg)](https://www.npmjs.com/package/@playchi-js/playchi-js-ui/v/canary)
 
-PlayKit JS UI is a UI Application Framework for composing PlayKit JS Player UI.
+PlayChi JS UI is a UI Application Framework for composing PlayChi JS Player UI.
 
 The application uses [Preact] to manage virtual DOM and provide a declarative way for building UI and [Redux] to manage a predictable state container.
 
-The PlayKit JS UI framework enables an easy and intuitive way of customize the UI to any purpose and design, either by simple CSS definitions or by letting application define it's entire layout.
+The PlayChi JS UI framework enables an easy and intuitive way of customize the UI to any purpose and design, either by simple CSS definitions or by letting application define it's entire layout.
 
 The UI framework exposes a UIManager that handles the life cycle of the UI, and and a library of components which is used to build the UI layout, where each component is responsible of a specific functionality.
 
@@ -17,7 +17,7 @@ Components library contains any need of the UI, but can be extended to include a
 
 The library also exposes its default presets, which can be used as-is&trade; or extended.
 
-PlayKit JS UI is written in [ECMAScript6], statically analysed using [Flow] and transpiled in ECMAScript5 using [Babel].
+PlayChi JS UI is written in [ECMAScript6], statically analysed using [Flow] and transpiled in ECMAScript5 using [Babel].
 
 [flow]: https://flow.org/
 [ecmascript6]: https://github.com/ericdouglas/ES6-Learning#articles--tutorials
@@ -41,11 +41,11 @@ PlayKit JS UI is written in [ECMAScript6], statically analysed using [Flow] and 
 
 ### Prerequisites
 
-The UI Manager expects a player that implements the [PlayKit JS Player] interface.
+The UI Manager expects a player that implements the [PlayChi JS Player] interface.
 
 The UI Manager depends on [Preact] and [Redux].
 
-[playkit js player]: https://github.com/kaltura/playkit-js
+[playchi js player]: https://github.com/tasvirchi/playchi-js
 [preact]: https://preactjs.com/
 [redux]: http://redux.js.org/
 
@@ -56,8 +56,8 @@ First, clone and run [yarn] to install dependencies:
 [yarn]: https://yarnpkg.com/lang/en/
 
 ```
-git clone https://github.com/kaltura/playkit-js-ui.git
-cd playkit-js-ui
+git clone https://github.com/tasvirchi/playchi-js-ui.git
+cd playchi-js-ui
 yarn install
 ```
 
@@ -74,14 +74,14 @@ yarn run build
 Finally, add the bundle as a script tag in your page, and initialize the player
 
 ```html
-<script type="text/javascript" src="/PATH/TO/FILE/playkit.js"></script>
-<script type="text/javascript" src="/PATH/TO/FILE/playkit-ui.js"></script>
+<script type="text/javascript" src="/PATH/TO/FILE/playchi.js"></script>
+<script type="text/javascript" src="/PATH/TO/FILE/playchi-ui.js"></script>
 <div id="player-placeholder" style="height:360px;width:640px">
   <script type="text/javascript">
     var playerConfig = {...};
     var uiConfig = {targetId: "player-placeholder"};
-    var player = playkit.core.loadPlayer(playerConfig);
-    var uiManager = new playkit.ui.UIManager(player, uiConfig);
+    var player = playchi.core.loadPlayer(playerConfig);
+    var uiManager = new playchi.ui.UIManager(player, uiConfig);
     uiManager.buildDefaultUI();
     player.play();
   </script>
@@ -132,7 +132,7 @@ Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c6
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/kaltura/playkit-js-ui/tags).
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/tasvirchi/playchi-js-ui/tags).
 
 ## License
 

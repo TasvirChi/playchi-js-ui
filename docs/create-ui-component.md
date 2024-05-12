@@ -7,7 +7,7 @@
 This component will just be a div wrapper with a className (To use JSX follow this [guide](./custom-ui-preset.md#using-jsx)).
 
 ```javascript
-const h = KalturaPlayer.ui.h;
+const h = TasvirchiPlayer.ui.h;
 
 const DumpComponent = <div className="dumb-component"></div>;
 
@@ -21,8 +21,8 @@ export default DumpComponent;
 This component is using the player bundled PReact to manage state and intercept mount events.
 
 ```javascript
-const h = KalturaPlayer.ui.h;
-const Component = KalturaPlayer.ui.preact.Component;
+const h = TasvirchiPlayer.ui.h;
+const Component = TasvirchiPlayer.ui.preact.Component;
 
 class SampleComponent extends Component {
   componentDidMount() {
@@ -44,8 +44,8 @@ export default SampleComponent;
 If you want to use JSX follow this [guide](./custom-ui-preset.md#using-jsx), and use following JSX syntax:
 
 ```javascript
-const h = KalturaPlayer.ui.h;
-const Component = KalturaPlayer.ui.preact.Component;
+const h = TasvirchiPlayer.ui.h;
+const Component = TasvirchiPlayer.ui.preact.Component;
 
 class DumbComponent extends Component {
   render(props) {
@@ -59,7 +59,7 @@ export default DumbComponent;
 The usage of this component will be:
 
 ```javascript
-const h = KalturaPlayer.ui.h;
+const h = TasvirchiPlayer.ui.h;
 h(DumbComponent, null, h('p', null, 'You can add here any components and html you want and it will be appended to the DumbComponent'));
 ```
 
@@ -80,7 +80,7 @@ This shouldn't bother you unless you are trying to add (P)React components. If t
 1. The player exposes the bundled PReact instance it is using, use that one instead of your own. This might work fine for simple use-cases.
 2. In more advanced use-cases you might want to bundle your own version of PReact or in cases that you are using React, you must isolate your component from the player PReact tree:
 
-   [ ] create new component that is using (extending) the PReact instance exposed by the player `KalturaPlayer.ui.preact.Component`
+   [ ] create new component that is using (extending) the PReact instance exposed by the player `TasvirchiPlayer.ui.preact.Component`
 
    [ ] inject the new component to the player
 
@@ -97,9 +97,9 @@ The component will also get a prop of additional className.
 
 ```javascript
 //@flow
-const h = KalturaPlayer.ui.h;
-const Component = KalturaPlayer.ui.preact.Component;
-const connect = playkit.ui.redux.connect;
+const h = TasvirchiPlayer.ui.h;
+const Component = TasvirchiPlayer.ui.preact.Component;
+const connect = playchi.ui.redux.connect;
 
 const mapStateToProps = state => ({playerState: state.engine.playerState});
 
@@ -134,7 +134,7 @@ export default connect(mapStateToProps)(PlayerStateLog);
 The usage of this component will be:
 
 ```javascript
-const h = KalturaPlayer.ui.h;
+const h = TasvirchiPlayer.ui.h;
 h(PlayerStateLog, {additionalClass: 'red-list'});
 ```
 
@@ -164,7 +164,7 @@ If a component is to be made in order to be included in the core library then sa
 
 Main difference it that dependencies are managed by importing the core libraries.
 
-instead of referring to the components via the `KalturaPlayer.ui.*` path they can be included like:
+instead of referring to the components via the `TasvirchiPlayer.ui.*` path they can be included like:
 
 ```javascript
 import {h, Component} from 'preact';

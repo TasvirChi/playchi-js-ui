@@ -136,7 +136,7 @@ function useDefaultAdsUi(props: any, context: any): boolean {
 }
 
 /**
- * @returns {boolean} - Whether to use playkit skip button or not.
+ * @returns {boolean} - Whether to use playchi skip button or not.
  */
 function useCustomSkipButton(): boolean {
   //TODO: false until we develop are own ads manager
@@ -144,7 +144,7 @@ function useCustomSkipButton(): boolean {
 }
 
 /**
- * @returns {boolean} - Whether to use playkit learn more button or not.
+ * @returns {boolean} - Whether to use playchi learn more button or not.
  */
 function useCustomLearnMoreButton(): boolean {
   //TODO: false until we develop are own ads manager

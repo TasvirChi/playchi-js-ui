@@ -27,12 +27,12 @@
     "paths": {
       "react": ["./node_modules/preact/compat/"],
       "react-dom": ["./node_modules/preact/compat/"],
-      "@playkit-js/kaltura-player-js": ["./src/types/kaltura-player-js.d.ts"]
+      "@playchi-js/tasvirchi-player-js": ["./src/types/tasvirchi-player-js.d.ts"]
     },
     "lib": ["dom", "ESNext"],
     "outDir": "./lib/",
     "allowSyntheticDefaultImports": true
   },
-  "files": ["./src/types/kaltura-player-js.d.ts"],
+  "files": ["./src/types/tasvirchi-player-js.d.ts"],
   "include": ["src/**/*"]
 }

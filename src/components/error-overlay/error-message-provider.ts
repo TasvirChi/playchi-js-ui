@@ -26,7 +26,7 @@ const errorsMap: Map<number, ErrorDetails> = new Map<number, ErrorDetails>([
   [12, {title: 'media_not_ready_error_title', message: 'media_not_ready_error_message'}],
   /** GEOLOCATION */
   [13, {title: 'geo_location_error_title', message: 'geo_location_error_message'}],
-  /** KS RESTRICTION */
+  /** TS RESTRICTION */
   [14, {title: 'media_unavailable_error_title', message: 'media_unavailable_error_message'}]
 ]);
 
