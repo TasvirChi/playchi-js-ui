@@ -1,6 +1,6 @@
 # ErrorOverlay
 
-Component that renders to indicate user when Kaltura player got an error
+Component that renders to indicate user when Tasvirchi player got an error
 
 ## Props
 
@@ -11,9 +11,9 @@ Component that renders to indicate user when Kaltura player got an error
 
 ## Player configuration
 
-> This guide assumes you are using the [Kaltura Player]
+> This guide assumes you are using the [Tasvirchi Player]
 
-[kaltura player]: https://github.com/kaltura/kaltura-player-js/
+[tasvirchi player]: https://github.com/tasvirchi/tasvirchi-player-js/
 
 In order to override error-overlay background add `backgroundUrl` link to player config
 
@@ -30,13 +30,13 @@ const config = {
     ...
 }
 
-const player = KalturaPlayer.setup(config);
+const player = TasvirchiPlayer.setup(config);
 ```
 
 ## Usage Example
 
 ```html
-//@flow import { h, ErrorOverlay } from 'playkit-js-ui';
+//@flow import { h, ErrorOverlay } from 'playchi-js-ui';
 
 export default function customUIPreset(props: any) {
     return (

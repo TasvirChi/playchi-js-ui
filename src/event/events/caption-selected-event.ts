@@ -1,4 +1,4 @@
-import {FakeEvent} from '@playkit-js/playkit-js';
+import {FakeEvent} from '@playchi-js/playchi-js';
 import {EventType} from '../event-type';
 
 /**

@@ -11,9 +11,9 @@ Let's see an example:
 > This sample will add a listener for the combination of F + shiftKey and will be removed on unmount
 
 ```javascript
-const h = KalturaPlayer.ui.h;
-const withKeyboardEvent = KalturaPlayer.ui.components.withKeyboardEvent;
-const Component = KalturaPlayer.ui.preact.Component;
+const h = TasvirchiPlayer.ui.h;
+const withKeyboardEvent = TasvirchiPlayer.ui.components.withKeyboardEvent;
+const Component = TasvirchiPlayer.ui.preact.Component;
 
 class SampleComponent extends Component {
   _keyboardEventHandlers: Array<KeyboardEventHandlers> = [
@@ -42,9 +42,9 @@ export default withKeyboardEvent(SampleComponent);
 Same can be done with the use of decorators:
 
 ```javascript
-const h = KalturaPlayer.ui.h;
-const withKeyboardEvent = KalturaPlayer.ui.components.withKeyboardEvent;
-const Component = KalturaPlayer.ui.preact.Component;
+const h = TasvirchiPlayer.ui.h;
+const withKeyboardEvent = TasvirchiPlayer.ui.components.withKeyboardEvent;
+const Component = TasvirchiPlayer.ui.preact.Component;
 
 @withKeyboardEvent
 class DumbComponent extends Component {
@@ -77,9 +77,9 @@ This method will enable only keyboard event handlers of this component to be inv
 All other component keyboard events will be temporarily disabled.
 
 ```javascript
-const h = KalturaPlayer.ui.h;
-const withKeyboardEvent = KalturaPlayer.ui.components.withKeyboardEvent;
-const Component = KalturaPlayer.ui.preact.Component;
+const h = TasvirchiPlayer.ui.h;
+const withKeyboardEvent = TasvirchiPlayer.ui.components.withKeyboardEvent;
+const Component = TasvirchiPlayer.ui.preact.Component;
 const componentName = 'DUMB_COMPONENT';
 
 @withKeyboardEvent(componentName)
@@ -113,9 +113,9 @@ For disabling ALL components keyboard handlers, `updateIsKeyboardEnabled` method
 A clear use case for that would be for example, when creating a component with an input text field.
 
 ```javascript
-const h = KalturaPlayer.ui.h;
-const withKeyboardEvent = KalturaPlayer.ui.components.withKeyboardEvent;
-const Component = KalturaPlayer.ui.preact.Component;
+const h = TasvirchiPlayer.ui.h;
+const withKeyboardEvent = TasvirchiPlayer.ui.components.withKeyboardEvent;
+const Component = TasvirchiPlayer.ui.preact.Component;
 const componentName = 'DUMB_COMPONENT';
 
 @withKeyboardEvent(componentName)
@@ -135,7 +135,7 @@ export default DumbComponent;
 The usage of this component will be:
 
 ```javascript
-const h = KalturaPlayer.ui.h;
+const h = TasvirchiPlayer.ui.h;
 h(DumbComponent, null, h('p', null, 'You can add here any components and html you want and it will be appended to the DumbComponent'));
 ```
 

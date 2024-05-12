@@ -17,7 +17,7 @@ declare type UIOptionsObject = {
   hoverTimeout?: number,
   logger?: loggerType,
   components?: ComponentsConfig,
-  uiComponents?: Array<KPUIComponent>,
+  uiComponents?: Array<TPUIComponent>,
   translations?: {[langKey: string]: Object},
   locale?: string;
   userTheme?: UserTheme

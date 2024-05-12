@@ -14,7 +14,7 @@ as you can see in the following full working example:
   <head>
     <meta charset="UTF-8" />
     <title>Customized Spinner</title>
-    <script src="https://cdnapisec.kaltura.com/p/<YOUR-PARTNER-ID>/embedPlaykitJs/uiconf_id/<YOUR-UICONF-ID>"></script>
+    <script src="https://cdnapisec.tasvirchi.com/p/<YOUR-PARTNER-ID>/embedPlaychiJs/uiconf_id/<YOUR-UICONF-ID>"></script>
     <style>
       .loading-spinner {
         border: 6px solid;
@@ -36,7 +36,7 @@ as you can see in the following full working example:
     <script>
 
       // ************** My Spinner Component *************
-      const { h } = KalturaPlayer.ui;
+      const { h } = TasvirchiPlayer.ui;
 
       function MySpinner() {
         return h('div', {className: 'loading-spinner'});
@@ -63,7 +63,7 @@ as you can see in the following full working example:
         }
       };
 
-      const player = KalturaPlayer.setup(config);
+      const player = TasvirchiPlayer.setup(config);
       player.loadMedia({ entryId: '1_ktrfo5hl' });
 
     </script>

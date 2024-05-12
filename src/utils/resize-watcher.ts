@@ -1,4 +1,4 @@
-import {FakeEventTarget, FakeEvent} from '@playkit-js/playkit-js';
+import {FakeEventTarget, FakeEvent} from '@playchi-js/playchi-js';
 import {EventType} from '../event';
 
 /**
@@ -66,7 +66,7 @@ class ResizeWatcher extends FakeEventTarget {
   }
 }
 
-const IFRAME_CLASS_NAME = 'playkit-size-iframe';
+const IFRAME_CLASS_NAME = 'playchi-size-iframe';
 
 /**
  * This class mimics the API of the ResizeObserver API (currently available only in Chrome).

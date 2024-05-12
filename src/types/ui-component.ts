@@ -1,11 +1,11 @@
-import {KPUIComponentOptions} from './ui-component-options';
+import {TPUIComponentOptions} from './ui-component-options';
 
-export interface KPUIAddComponent extends KPUIComponentOptions {
+export interface TPUIAddComponent extends TPUIComponentOptions {
   get: (() => any) | string;
   props?: object;
 }
 
-export interface KPUIRemoveComponent {
+export interface TPUIRemoveComponent {
   /** @deprecated Use area instead. */
   container?: string;
   removeComponent: string;
@@ -13,4 +13,4 @@ export interface KPUIRemoveComponent {
   area: string;
 }
 
-export interface KPUIComponent extends KPUIAddComponent, KPUIRemoveComponent {}
+export interface TPUIComponent extends TPUIAddComponent, TPUIRemoveComponent {}

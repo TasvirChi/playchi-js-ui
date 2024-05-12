@@ -6,7 +6,7 @@ Configuration parameters could be provided upon instantiation of the UI manager 
 var config = {
   // Configuration here
 };
-var uiManager = new playkit.ui.UIManager(player, config);
+var uiManager = new playchi.ui.UIManager(player, config);
 ```
 
 #### Configuration Structure
@@ -320,7 +320,7 @@ var uiManager = new playkit.ui.UIManager(player, config);
 > >
 > > > ### config.components.fullscreen.inBrowserFullscreenForIOS (Deprecated)
 > > >
-> > > #### Moved to [`playback.inBrowserFullscreen`](https://github.com/kaltura/playkit-js/blob/master/docs/configuration.md#configplaybackinbrowserfullscreen)
+> > > #### Moved to [`playback.inBrowserFullscreen`](https://github.com/tasvirchi/playchi-js/blob/master/docs/configuration.md#configplaybackinbrowserfullscreen)
 > > >
 > > > ##
 > > >

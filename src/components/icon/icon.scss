@@ -148,11 +148,11 @@
 
 // Dynamic Colored Icons
 .player {
-  --playkit-icon-vr-stereo-full-url: #{icon(vrStereoFull, $brand-color)};
-  --playkit-icon-chromecast-url: #{icon(chromecast, $brand-color)};
-  --playkit-icon-quality-HD-active-url: #{icon(qualityHdActive, $brand-color, '16', '0 0 16 16')};
-  --playkit-icon-quality-4K-active-url: #{icon(quality4kActive, $brand-color, '16', '0 0 16 16')};
-  --playkit-icon-quality-8K-active-url: #{icon(quality8kActive, $brand-color, '16', '0 0 16 16')};
+  --playchi-icon-vr-stereo-full-url: #{icon(vrStereoFull, $brand-color)};
+  --playchi-icon-chromecast-url: #{icon(chromecast, $brand-color)};
+  --playchi-icon-quality-HD-active-url: #{icon(qualityHdActive, $brand-color, '16', '0 0 16 16')};
+  --playchi-icon-quality-4K-active-url: #{icon(quality4kActive, $brand-color, '16', '0 0 16 16')};
+  --playchi-icon-quality-8K-active-url: #{icon(quality8kActive, $brand-color, '16', '0 0 16 16')};
 }
 
 .icon-maximize {
@@ -264,7 +264,7 @@
 }
 
 .icon-vr-stereo-full {
-  background-image: var(--playkit-icon-vr-stereo-full-url);
+  background-image: var(--playchi-icon-vr-stereo-full-url);
 }
 
 .icon-chromecast {
@@ -272,7 +272,7 @@
 }
 
 .icon-chromecast-brand {
-  background-image: var(--playkit-icon-chromecast-url);
+  background-image: var(--playchi-icon-chromecast-url);
 }
 
 .icon-next {
@@ -303,7 +303,7 @@
 
 .icon-quality-hd-active {
   &:after {
-    background-image: var(--playkit-icon-quality-HD-active-url);
+    background-image: var(--playchi-icon-quality-HD-active-url);
   }
 }
 
@@ -315,7 +315,7 @@
 
 .icon-quality-4k-active {
   &:after {
-    background-image: var(--playkit-icon-quality-4K-active-url);
+    background-image: var(--playchi-icon-quality-4K-active-url);
   }
 }
 
@@ -327,7 +327,7 @@
 
 .icon-quality-8k-active {
   &:after {
-    background-image: var(--playkit-icon-quality-8K-active-url);
+    background-image: var(--playchi-icon-quality-8K-active-url);
   }
 }
 

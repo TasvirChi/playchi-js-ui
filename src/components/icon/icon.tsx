@@ -76,7 +76,7 @@ class Icon extends Component<any, any> {
     super(props);
     const {path, id} = props;
     if (path && id) {
-      this._className = `playkit-icon-${id}`;
+      this._className = `playchi-icon-${id}`;
       // Avoid from override existing classes
       const styleSheet: any = Array.from(document.styleSheets).find((styleSheet: any) => styleSheet.ownerNode.id === packageName);
       const classCssExists = styleSheet ? Array.from(styleSheet.rules).find((rule: any) => rule.selectorText === `.${this._className}`) : false;

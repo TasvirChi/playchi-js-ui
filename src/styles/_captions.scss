@@ -40,11 +40,11 @@ $hovering-offset: 50px;
     }
   }
   &.overlay-active {
-    :global(.playkit-subtitles) {
+    :global(.playchi-subtitles) {
       visibility: hidden;
     }
   }
-  :global(.playkit-subtitles) {
+  :global(.playchi-subtitles) {
     top: $hovering-offset;
     transform: translateY(0px);
     -webkit-transform: translateY(0px);
@@ -52,15 +52,15 @@ $hovering-offset: 50px;
     transition: ease-in 100ms;
   }
   &:not(.overlay-active) {
-    &.state-paused :global(.playkit-subtitles),
-    &.state-idle :global(.playkit-subtitles),
-    &.hover :global(.playkit-subtitles) {
+    &.state-paused :global(.playchi-subtitles),
+    &.state-idle :global(.playchi-subtitles),
+    &.hover :global(.playchi-subtitles) {
       transform: translateY(-$hovering-offset);
       -webkit-transform: translateY(-$hovering-offset);
       -ms-transform: translateY(-$hovering-offset);
     }
     &.fullscreen.iOS {
-      :global(.playkit-subtitles) {
+      :global(.playchi-subtitles) {
         transform: translateY(0px);
         -webkit-transform: translateY(0px);
         -ms-transform: translateY(0px);

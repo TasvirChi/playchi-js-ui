@@ -7,7 +7,7 @@ import {withPlayer} from '../player';
 import {ExpandableText} from '../expandable-text';
 import {Scrollable} from '../scrollable';
 import {withEventManager} from '../../event';
-import {EventManager} from '@playkit-js/playkit-js';
+import {EventManager} from '@playchi-js/playchi-js';
 import {WithPlayerProps} from '../player/with-player';
 import {WithEventManagerProps} from '../../event/with-event-manager';
 

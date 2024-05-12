@@ -2,7 +2,7 @@ import {hexToHsl, hslToHex} from './color-format-convertors';
 import style from '../styles/style.scss';
 import {UserTheme} from '../types';
 
-const PREFIX = 'playkit';
+const PREFIX = 'playchi';
 const ACTUAL_USED_CSS_VAR = `--${PREFIX}-{name}-color`;
 const HSL_HUE_CSS_VAR = `--${PREFIX}-{name}-hsl-hue`;
 const HSL_SATURATION_CSS_VAR = `--${PREFIX}-{name}-hsl-saturation`;
@@ -10,30 +10,30 @@ const HSL_LIGHTNESS_CSS_VAR = `--${PREFIX}-{name}-hsl-lightness`;
 
 const cssVarNames = {
   colors: {
-    live: '--playkit-live-color',
-    playerBackground: '--playkit-player-background-color',
-    paperSurface: '--playkit-paper-color',
-    elevatedSurface: '--playkit-elevated-color',
-    protectionSurface: '--playkit-protection-color',
-    tone1: '--playkit-tone-1-color',
-    tone2: '--playkit-tone-2-color',
-    tone3: '--playkit-tone-3-color',
-    tone4: '--playkit-tone-4-color',
-    tone5: '--playkit-tone-5-color',
-    tone6: '--playkit-tone-6-color',
-    tone7: '--playkit-tone-7-color',
-    tone8: '--playkit-tone-8-color'
+    live: '--playchi-live-color',
+    playerBackground: '--playchi-player-background-color',
+    paperSurface: '--playchi-paper-color',
+    elevatedSurface: '--playchi-elevated-color',
+    protectionSurface: '--playchi-protection-color',
+    tone1: '--playchi-tone-1-color',
+    tone2: '--playchi-tone-2-color',
+    tone3: '--playchi-tone-3-color',
+    tone4: '--playchi-tone-4-color',
+    tone5: '--playchi-tone-5-color',
+    tone6: '--playchi-tone-6-color',
+    tone7: '--playchi-tone-7-color',
+    tone8: '--playchi-tone-8-color'
   }
 };
 
 const ACCENT_AND_ACKNOWLEDGEMENT_COLORS = ['primary', 'secondary', 'success', 'danger', 'warning'];
 
 const dynamicColoredIconsSvgUrlVars = [
-  '--playkit-icon-data-url',
-  '--playkit-icon-chromecast-url',
-  '--playkit-icon-quality-HD-active-url',
-  '--playkit-icon-quality-4K-active-url',
-  '--playkit-icon-quality-8K-active-url'
+  '--playchi-icon-data-url',
+  '--playchi-icon-chromecast-url',
+  '--playchi-icon-quality-HD-active-url',
+  '--playchi-icon-quality-4K-active-url',
+  '--playchi-icon-quality-8K-active-url'
 ];
 
 const TEXT_CONTRAST_SUFFIX = 'text-contrast';
@@ -168,9 +168,9 @@ export class ThemesManager {
    * @returns {void}
    */
   public setCSSVariable(variableName: string, value: string): void {
-    const playkitPlayerElement = this.playerContainerElement.querySelector<HTMLDivElement>(`.${style.player}`)!;
-    const playkitPlayerElementStyle = playkitPlayerElement.style;
+    const playchiPlayerElement = this.playerContainerElement.querySelector<HTMLDivElement>(`.${style.player}`)!;
+    const playchiPlayerElementStyle = playchiPlayerElement.style;
 
-    playkitPlayerElementStyle.setProperty(variableName, value);
+    playchiPlayerElementStyle.setProperty(variableName, value);
   }
 }

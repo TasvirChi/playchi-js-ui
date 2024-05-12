@@ -1,4 +1,4 @@
-const namespace = 'playkit-ui';
+const namespace = 'playchi-ui';
 
 const EventType = {
   UI_CLICKED: `${namespace}-uiclicked`,

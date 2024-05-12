@@ -1,7 +1,7 @@
 const webpack = require('webpack');
 const path = require('path');
 const packageData = require('./package.json');
-const CSS_MODULE_PREFIX = 'playkit';
+const CSS_MODULE_PREFIX = 'playchi';
 
 module.exports = (env, {mode}) => {
   return {
@@ -57,11 +57,11 @@ module.exports = (env, {mode}) => {
       ]
     },
     output: {
-      filename: 'playkit-ui.js',
+      filename: 'playchi-ui.js',
       path: path.resolve(__dirname, 'dist'),
       library: {
         umdNamedDefine: true,
-        name: ['playkit', 'ui'],
+        name: ['playchi', 'ui'],
         type: 'umd'
       },
       clean: true
@@ -89,12 +89,12 @@ module.exports = (env, {mode}) => {
       }
     },
     externals: {
-      '@playkit-js/kaltura-player-js': {root: 'KalturaPlayer'},
-      '@playkit-js/playkit-js': {
-        commonjs: '@playkit-js/playkit-js',
-        commonjs2: '@playkit-js/playkit-js',
-        amd: '@playkit-js/playkit-js',
-        root: ['playkit', 'core']
+      '@playchi-js/tasvirchi-player-js': {root: 'TasvirchiPlayer'},
+      '@playchi-js/playchi-js': {
+        commonjs: '@playchi-js/playchi-js',
+        commonjs2: '@playchi-js/playchi-js',
+        amd: '@playchi-js/playchi-js',
+        root: ['playchi', 'core']
       }
     }
   };

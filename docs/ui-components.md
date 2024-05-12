@@ -33,10 +33,10 @@ Injecting new component into preset means:
 - Any component must be associated to one or more presets and given a valid area name it will be injected once that preset/area is available in the player dom.
 
 > :information_source:
-> This guide assumes you are using the [Kaltura Player].</br>
-> Each section will also contain a collapsable section to show snippet for testing the UI application in standalone mode - where it is imported directly and not used as part of the Kaltura Player.
+> This guide assumes you are using the [Tasvirchi Player].</br>
+> Each section will also contain a collapsable section to show snippet for testing the UI application in standalone mode - where it is imported directly and not used as part of the Tasvirchi Player.
 
-[kaltura player]: https://github.com/kaltura/kaltura-player-js/
+[tasvirchi player]: https://github.com/tasvirchi/tasvirchi-player-js/
 
 ## Define component from configuration
 
@@ -201,7 +201,7 @@ The `BasePlugin` exposes an optional method `getUIComponents` that is called onc
 The declaration is the same as describe above when using the configuration.
 
 ```
-export class MyCustomPlugin extends KalturaPlayer.core.BasePlugin {
+export class MyCustomPlugin extends TasvirchiPlayer.core.BasePlugin {
   getUIComponents() {
     return [
       {

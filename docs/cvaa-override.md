@@ -7,7 +7,7 @@ To prevent viewers from using these modifications, simply overload the style opt
 For example, adding the line below will remove the ability to change the captions color:
 
 ```
-.playkit-font-color {
+.playchi-font-color {
   display: none
 }
 ```
@@ -18,10 +18,10 @@ Refer to the list of caption settings classes below for detailed information on 
 
 | Class Name                    | Description                                    |
 | ----------------------------- | ---------------------------------------------- |
-| `.playkit-font-size`          | Changes the size of the captions               |
-| `.playkit-font-color`         | Changes the color of the captions              |
-| `.playkit-font-family`        | Changes the font family of the captions        |
-| `.playkit-font-style`         | Changes the weight of the captions             |
-| `.playkit-font-opacity`       | Changes the opacity of the captions            |
-| `.playkit-background-color`   | Changes the color of the captions background   |
-| `.playkit-background-opacity` | Changes the opacity of the captions background |
+| `.playchi-font-size`          | Changes the size of the captions               |
+| `.playchi-font-color`         | Changes the color of the captions              |
+| `.playchi-font-family`        | Changes the font family of the captions        |
+| `.playchi-font-style`         | Changes the weight of the captions             |
+| `.playchi-font-opacity`       | Changes the opacity of the captions            |
+| `.playchi-background-color`   | Changes the color of the captions background   |
+| `.playchi-background-opacity` | Changes the opacity of the captions background |

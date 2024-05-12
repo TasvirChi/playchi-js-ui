@@ -71,7 +71,7 @@
   }
 }
 
-.player :global([id^='playkit-ads-container']) {
+.player :global([id^='playchi-ads-container']) {
   &:global([data-adtype='overlay']) {
     z-index: 1;
   }
@@ -79,9 +79,9 @@
 }
 
 .player:not(.ad-break).metadata-loaded {
-  &.hover :global([id^='playkit-ads-container']),
-  &.state-paused :global([id^='playkit-ads-container']),
-  &.state-idle :global([id^='playkit-ads-container']) {
+  &.hover :global([id^='playchi-ads-container']),
+  &.state-paused :global([id^='playchi-ads-container']),
+  &.state-idle :global([id^='playchi-ads-container']) {
     transform: translateY(-$default-hovering-offset);
     -webkit-transform: translateY(-$default-hovering-offset);
     -ms-transform: translateY(-$default-hovering-offset);

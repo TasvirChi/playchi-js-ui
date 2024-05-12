@@ -1,7 +1,7 @@
 import {h, Component, toChildArray, Fragment, VNode, ComponentChild, ComponentChildren} from 'preact';
 import {connect} from 'react-redux';
 import {withLogger} from '../logger';
-import {KPUIComponent} from '../../types';
+import {TPUIComponent} from '../../types';
 
 /**
  * mapping state to props
@@ -192,11 +192,11 @@ class PlayerArea extends Component<any, any> {
 
   /**
    *  render preset component
-   * @param {KPUIComponent} uiComponent uiComponent
+   * @param {TPUIComponent} uiComponent uiComponent
    * @returns {*} component
    * @private
    */
-  _renderUIComponent(uiComponent: KPUIComponent): VNode<any> | null {
+  _renderUIComponent(uiComponent: TPUIComponent): VNode<any> | null {
     if (!uiComponent.get) {
       return null;
     }

@@ -1,4 +1,4 @@
-import {AudioTrack, PKTextTrack, VideoTrack} from '@playkit-js/playkit-js';
+import {AudioTrack, PCTextTrack, VideoTrack} from '@playchi-js/playchi-js';
 
 export interface EngineState {
   isIdle: boolean;
@@ -25,7 +25,7 @@ export interface EngineState {
   muted: boolean;
   videoTracks: VideoTrack[];
   audioTracks: AudioTrack[];
-  textTracks: PKTextTrack[];
+  textTracks: PCTextTrack[];
   adIsLinear: boolean;
   adBreak: boolean;
   adIsPlaying: boolean;

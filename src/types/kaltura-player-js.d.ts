@@ -1,53 +1,53 @@
-import { AbrMode } from '@playkit-js/playkit-js';
-import { BaseMiddleware } from '@playkit-js/playkit-js';
-import * as core from '@playkit-js/playkit-js';
-import { EngineType } from '@playkit-js/playkit-js';
-import { Error as Error_2 } from '@playkit-js/playkit-js';
-import { EventManager } from '@playkit-js/playkit-js';
-import { FakeEvent } from '@playkit-js/playkit-js';
-import { FakeEventTarget } from '@playkit-js/playkit-js';
-import { KPUIAddComponent } from '@playkit-js/playkit-js-ui';
-import { KPUIRemoveComponent } from '@playkit-js/playkit-js-ui';
-import { LoggerLevels } from '@playkit-js/playkit-js';
-import { MediaType } from '@playkit-js/playkit-js';
-import { PKAbrConfigObject } from '@playkit-js/playkit-js';
-import { PKDimensionsConfig } from '@playkit-js/playkit-js';
-import { PKDrmDataObject } from '@playkit-js/playkit-js';
-import { PKEventTypes } from '@playkit-js/playkit-js';
-import { PKMediaSourceObject } from '@playkit-js/playkit-js';
-import { PKMetadataConfigObject } from '@playkit-js/playkit-js';
-import { PKPlaybackConfigObject } from '@playkit-js/playkit-js';
-import { PKPlayerDimensions } from '@playkit-js/playkit-js';
-import { PKSessionConfigObject } from '@playkit-js/playkit-js';
-import { PKSourcesConfigObject } from '@playkit-js/playkit-js';
-import { PKTextConfigObject } from '@playkit-js/playkit-js';
-import { Provider } from '@playkit-js/playkit-js-providers/ovp-provider';
-import { ProviderEntryListObject } from '@playkit-js/playkit-js-providers/types';
-import { ProviderMediaConfigSessionObject } from '@playkit-js/playkit-js-providers/types';
-import { ProviderMediaConfigSourcesObject } from '@playkit-js/playkit-js-providers/types';
-import { ProviderMediaInfoObject } from '@playkit-js/playkit-js-providers/types';
-import { ProviderOptionsObject } from '@playkit-js/playkit-js-providers/types';
-import { ProviderPlaylistInfoObject } from '@playkit-js/playkit-js-providers/types';
-import { ProviderPlaylistMetadataObject } from '@playkit-js/playkit-js-providers/types';
-import { ProviderPlaylistObject } from '@playkit-js/playkit-js-providers/types';
-import * as providers from '@playkit-js/playkit-js-providers/ovp-provider';
-import { StateType } from '@playkit-js/playkit-js';
-import { StreamType } from '@playkit-js/playkit-js';
-import { TextStyle } from '@playkit-js/playkit-js';
-import { ThumbnailInfo } from '@playkit-js/playkit-js';
-import { TimedMetadata } from '@playkit-js/playkit-js';
-import { Track } from '@playkit-js/playkit-js';
-import { TrackType } from '@playkit-js/playkit-js';
-import { TrackTypes } from '@playkit-js/playkit-js';
-import * as ui from '@playkit-js/playkit-js-ui';
-import { UIEventType } from '@playkit-js/playkit-js-ui';
-import { UIOptionsObject } from '@playkit-js/playkit-js-ui';
-import { UIPreset } from '@playkit-js/playkit-js-ui';
+import { AbrMode } from '@playchi-js/playchi-js';
+import { BaseMiddleware } from '@playchi-js/playchi-js';
+import * as core from '@playchi-js/playchi-js';
+import { EngineType } from '@playchi-js/playchi-js';
+import { Error as Error_2 } from '@playchi-js/playchi-js';
+import { EventManager } from '@playchi-js/playchi-js';
+import { FakeEvent } from '@playchi-js/playchi-js';
+import { FakeEventTarget } from '@playchi-js/playchi-js';
+import { TPUIAddComponent } from '@playchi-js/playchi-js-ui';
+import { TPUIRemoveComponent } from '@playchi-js/playchi-js-ui';
+import { LoggerLevels } from '@playchi-js/playchi-js';
+import { MediaType } from '@playchi-js/playchi-js';
+import { PCAbrConfigObject } from '@playchi-js/playchi-js';
+import { PCDimensionsConfig } from '@playchi-js/playchi-js';
+import { PCDrmDataObject } from '@playchi-js/playchi-js';
+import { PCEventTypes } from '@playchi-js/playchi-js';
+import { PCMediaSourceObject } from '@playchi-js/playchi-js';
+import { PCMetadataConfigObject } from '@playchi-js/playchi-js';
+import { PCPlaybackConfigObject } from '@playchi-js/playchi-js';
+import { PCPlayerDimensions } from '@playchi-js/playchi-js';
+import { PCSessionConfigObject } from '@playchi-js/playchi-js';
+import { PCSourcesConfigObject } from '@playchi-js/playchi-js';
+import { PCTextConfigObject } from '@playchi-js/playchi-js';
+import { Provider } from '@playchi-js/playchi-js-providers/ovp-provider';
+import { ProviderEntryListObject } from '@playchi-js/playchi-js-providers/types';
+import { ProviderMediaConfigSessionObject } from '@playchi-js/playchi-js-providers/types';
+import { ProviderMediaConfigSourcesObject } from '@playchi-js/playchi-js-providers/types';
+import { ProviderMediaInfoObject } from '@playchi-js/playchi-js-providers/types';
+import { ProviderOptionsObject } from '@playchi-js/playchi-js-providers/types';
+import { ProviderPlaylistInfoObject } from '@playchi-js/playchi-js-providers/types';
+import { ProviderPlaylistMetadataObject } from '@playchi-js/playchi-js-providers/types';
+import { ProviderPlaylistObject } from '@playchi-js/playchi-js-providers/types';
+import * as providers from '@playchi-js/playchi-js-providers/ovp-provider';
+import { StateType } from '@playchi-js/playchi-js';
+import { StreamType } from '@playchi-js/playchi-js';
+import { TextStyle } from '@playchi-js/playchi-js';
+import { ThumbnailInfo } from '@playchi-js/playchi-js';
+import { TimedMetadata } from '@playchi-js/playchi-js';
+import { Track } from '@playchi-js/playchi-js';
+import { TrackType } from '@playchi-js/playchi-js';
+import { TrackTypes } from '@playchi-js/playchi-js';
+import * as ui from '@playchi-js/playchi-js-ui';
+import { UIEventType } from '@playchi-js/playchi-js-ui';
+import { UIOptionsObject } from '@playchi-js/playchi-js-ui';
+import { UIPreset } from '@playchi-js/playchi-js-ui';
 
 /**
  * @class Ad
  * @param {string} id - Ad ID.
- * @param {PKAdOptions} options - Ad data options.
+ * @param {PCAdOptions} options - Ad data options.
  */
 export declare class Ad {
   private readonly _id;
@@ -71,7 +71,7 @@ export declare class Ad {
   private readonly _wrapperAdIds;
   private readonly _wrapperCreativeIds;
   private readonly _wrapperAdSystems;
-  constructor(id: string, options: PKAdOptions);
+  constructor(id: string, options: PCAdOptions);
   /**
    * @instance
    * @memberof Ad
@@ -211,7 +211,7 @@ export declare class AdBreak {
   private readonly _type;
   private readonly _position;
   private readonly _numAds;
-  constructor(options: PKAdBreakOptions);
+  constructor(options: PCAdBreakOptions);
   /**
    * @instance
    * @memberof AdBreak
@@ -234,7 +234,7 @@ export declare class AdBreak {
 }
 
 /**
- * @typedef {Object} KPAdBreakObject@typedef {Object} KPAdBreakObject
+ * @typedef {Object} TPAdBreakObject@typedef {Object} TPAdBreakObject
  * @property {number} position - The position; in seconds; to show the ad break.
  * @property {number} percentage - Alternative parameter to `position`. The position; in percentage of the media length; to show the ad break (optional).
  * @property {number} every - Alternative parameter to `position`. Play ad break every X seconds (optional).
@@ -248,7 +248,7 @@ declare interface AdBreakObject {
 }
 
 /**
- * @typedef {Object} KPAdObject@typedef {Object} KPAdObject
+ * @typedef {Object} TPAdObject@typedef {Object} TPAdObject
  * @property {Array<string>} url - List of urls; each one specifies the ad tag url that is requested from the ad server. The player will request the first url; if failed; it will request the second url and so on (aka waterfalling).
  * @property {Array<string>} response - List of XMLs; each one specifies a VAST 2.0 document to be used as the ads response instead of making a request via an ad tag url. The player will use the first XML; if failed; it will use the second and so on (aka waterfalling).
  * @property {boolean} bumper - Specifies whether this is a bumper.
@@ -292,7 +292,7 @@ declare class AdsController extends FakeEventTarget implements IAdsController {
   private readonly _prebidManager;
   private _liveSeeking;
   prerollReady: Promise<any>;
-  constructor(player: KalturaPlayer, adsPluginControllers: Array<IAdsPluginController>);
+  constructor(player: TasvirchiPlayer, adsPluginControllers: Array<IAdsPluginController>);
   /**
    * @instance
    * @memberof AdsController
@@ -338,12 +338,12 @@ declare class AdsController extends FakeEventTarget implements IAdsController {
   skipAd(): void;
   /**
    * Play an ad on demand.
-   * @param {KPAdPod} adPod - The ad pod play.
+   * @param {TPAdPod} adPod - The ad pod play.
    * @instance
    * @memberof AdsController
    * @returns {void}
    */
-  playAdNow(adPod: KPAdPod): void;
+  playAdNow(adPod: TPAdPod): void;
   getMiddleware(): BaseMiddleware;
   private _init;
   private _initMembers;
@@ -377,12 +377,12 @@ declare class AdsController extends FakeEventTarget implements IAdsController {
 }
 
 /**
- * @typedef {Object} KPAdvertisingConfigObject@typedef {Object} KPAdvertisingConfigObject
+ * @typedef {Object} TPAdvertisingConfigObject@typedef {Object} TPAdvertisingConfigObject
  * @property {PrebidConfig} prebid - The prebid config.
- * @property {Array<KPAdBreakObject>} adBreaks - The ad breaks scheme.
+ * @property {Array<TPAdBreakObject>} adBreaks - The ad breaks scheme.
  * @property {number} [playAdsAfterTime] - Only play ad breaks scheduled after this time (in seconds). This setting is strictly after - e.g. setting playAdsAfterTime to 15 will cause the player to ignore an ad break scheduled to play at 15s.
  * @property {boolean} [showAdBreakCuePoint] - Whether to show the ad breaks cue points.
- * @property {Object} [adBreakCuePointStyle] - Style options for the ad breaks cue points - See the options {@link https://github.com/kaltura/playkit-js-timeline/blob/main/docs/types.md#cuepointoptionsobject|Here}.
+ * @property {Object} [adBreakCuePointStyle] - Style options for the ad breaks cue points - See the options {@link https://github.com/tasvirchi/playchi-js-timeline/blob/main/docs/types.md#cuepointoptionsobject|Here}.
  */
 export declare interface AdvertisingConfig {
   prebid?: PrebidConfig;
@@ -417,7 +417,7 @@ export declare class BasePlugin {
    * Reference to the actual player.
    * @member
    */
-  protected player: KalturaPlayer;
+  protected player: TasvirchiPlayer;
   /**
    * The event manager of the plugin.
    * @member
@@ -448,7 +448,7 @@ export declare class BasePlugin {
    * @constructor
    * @private
    */
-  constructor(name: string, player: KalturaPlayer, config?: any);
+  constructor(name: string, player: TasvirchiPlayer, config?: any);
   /**
    * Getter for the configuration of the plugin.
    * @param {string} attr - The key in the plugin configuration (optional).
@@ -510,7 +510,7 @@ export declare class BasePlugin {
 
 /**
  * Basic remote player.
- * Implements the Kaltura Player playback, ads, tracks,vr and cast APIs.
+ * Implements the Tasvirchi Player playback, ads, tracks,vr and cast APIs.
  * Remote players should extend this class and implement the needed API.
  * @class BaseRemotePlayer
  * @param {string} name - Remote player name.
@@ -967,7 +967,7 @@ declare class BaseRemotePlayer extends FakeEventTarget implements IRemotePlayer 
    */
   get type(): string;
   /**
-   * @returns {KPOptionsObject} - The runtime remote player config.
+   * @returns {TPOptionsObject} - The runtime remote player config.
    * @instance
    * @memberof BaseRemotePlayer
    */
@@ -991,17 +991,17 @@ declare class BaseStorageManager {
   /**
    * Applies cache support if it's supported by the environment.
    * @private
-   * @param {KalturaPlayer} player - The Kaltura player.
+   * @param {TasvirchiPlayer} player - The Tasvirchi player.
    * @returns {void}
    */
-  static attachAll(player: KalturaPlayer): void;
+  static attachAll(player: TasvirchiPlayer): void;
   /**
    * Sets the storage config on the player config if certain conditions are met.
    * @private
-   * @param {KPOptionsObject} options - kaltura player options
+   * @param {TPOptionsObject} options - tasvirchi player options
    * @returns {void}
    */
-  static setStorageConfig(options: KalturaPlayerConfig): void;
+  static setStorageConfig(options: TasvirchiPlayerConfig): void;
   /**
    * @static
    * @private
@@ -1075,7 +1075,7 @@ declare class BaseStorageManager {
    * @static
    * @return {void}
    */
-  static attach(player: KalturaPlayer): void;
+  static attach(player: TasvirchiPlayer): void;
   /**
    * Initialize the storage manager.
    * @private
@@ -1096,12 +1096,12 @@ export declare const cast: {
   RemoteAvailablePayload: typeof RemoteAvailablePayload;
   RemotePlayerUI: typeof RemotePlayerUI;
   CastEventType: {
-    readonly CAST_SESSION_START_FAILED: "kaltura-player-castsessionstartfailed";
-    readonly CAST_SESSION_STARTING: "kaltura-player-castsessionstarting";
-    readonly CAST_SESSION_STARTED: "kaltura-player-castsessionstarted";
-    readonly CAST_SESSION_ENDING: "kaltura-player-castsessionending";
-    readonly CAST_SESSION_ENDED: "kaltura-player-castsessionended";
-    readonly CAST_AVAILABLE: "kaltura-player-castavailable";
+    readonly CAST_SESSION_START_FAILED: "tasvirchi-player-castsessionstartfailed";
+    readonly CAST_SESSION_STARTING: "tasvirchi-player-castsessionstarting";
+    readonly CAST_SESSION_STARTED: "tasvirchi-player-castsessionstarted";
+    readonly CAST_SESSION_ENDING: "tasvirchi-player-castsessionending";
+    readonly CAST_SESSION_ENDED: "tasvirchi-player-castsessionended";
+    readonly CAST_AVAILABLE: "tasvirchi-player-castavailable";
   };
   RemotePlayerType: {
     [type: string]: string;
@@ -1130,7 +1130,7 @@ export declare const cast: {
  * 5. CAST_SESSION_ENDED
  * @example
  * // How to use
- * player.addEventListener(KalturaPlayer.cast.CastEventType.CAST_SESSION_STARTED, e => {
+ * player.addEventListener(TasvirchiPlayer.cast.CastEventType.CAST_SESSION_STARTED, e => {
  *   console.log(e.session);
  * };
  */
@@ -1140,37 +1140,37 @@ declare const CastEventType: {
    * @event CAST_SESSION_START_FAILED
    * @memberof CastEventType
    */
-  readonly CAST_SESSION_START_FAILED: "kaltura-player-castsessionstartfailed";
+  readonly CAST_SESSION_START_FAILED: "tasvirchi-player-castsessionstartfailed";
   /**
    * Fires when cast session starting.
    * @event CAST_SESSION_STARTING
    * @memberof CastEventType
    */
-  readonly CAST_SESSION_STARTING: "kaltura-player-castsessionstarting";
+  readonly CAST_SESSION_STARTING: "tasvirchi-player-castsessionstarting";
   /**
    * Fires when cast session started.
    * @event CAST_SESSION_STARTED
    * @memberof CastEventType
    */
-  readonly CAST_SESSION_STARTED: "kaltura-player-castsessionstarted";
+  readonly CAST_SESSION_STARTED: "tasvirchi-player-castsessionstarted";
   /**
    * Fires when cast session ending.
    * @event CAST_SESSION_ENDING
    * @memberof CastEventType
    */
-  readonly CAST_SESSION_ENDING: "kaltura-player-castsessionending";
+  readonly CAST_SESSION_ENDING: "tasvirchi-player-castsessionending";
   /**
    * Fires when cast session ended.
    * @event CAST_SESSION_ENDED
    * @memberof CastEventType
    */
-  readonly CAST_SESSION_ENDED: "kaltura-player-castsessionended";
+  readonly CAST_SESSION_ENDED: "tasvirchi-player-castsessionended";
   /**
    * Fires when cast is available.
    * @event CAST_AVAILABLE
    * @memberof CastEventType
    */
-  readonly CAST_AVAILABLE: "kaltura-player-castavailable";
+  readonly CAST_AVAILABLE: "tasvirchi-player-castavailable";
 };
 
 export declare type ClassConstructor<T> = new (...args: any[]) => T;
@@ -1187,7 +1187,7 @@ export declare interface CuePoint {
 declare class CuePointManager {
   private _player;
   private _textTrack;
-  constructor(player: KalturaPlayer);
+  constructor(player: TasvirchiPlayer);
   private _addTextTrack;
   private _getMetadataTracks;
   private _createTextTrackCue;
@@ -1236,15 +1236,15 @@ export declare interface ExternalThumbnailsConfig {
 /**
  * get a player instance by id
  * @param {string} id - the player ID
- * @returns {KalturaPlayer | null} - the player if found by the supplied ID or null if key doesn't exist
+ * @returns {TasvirchiPlayer | null} - the player if found by the supplied ID or null if key doesn't exist
  */
-export declare function getPlayer(id: string): KalturaPlayer | null;
+export declare function getPlayer(id: string): TasvirchiPlayer | null;
 
 /**
  * get all instantiated players
- * @returns {KalturaPlayers} - map of player ids and their respective instantiated player
+ * @returns {TasvirchiPlayers} - map of player ids and their respective instantiated player
  */
-export declare function getPlayers(): Record<string, KalturaPlayer>;
+export declare function getPlayers(): Record<string, TasvirchiPlayer>;
 
 /**
  * @typedef {Object} HEVCConfigObject@typedef {Object} HEVCConfigObject
@@ -1277,7 +1277,7 @@ export declare interface IAdsController {
   getAdBreak(): AdBreak | undefined;
   getAd(): Ad | undefined;
   skipAd(): void;
-  playAdNow(adPod: KPAdPod): void;
+  playAdNow(adPod: TPAdPod): void;
 }
 
 export declare interface IAdsControllerProvider {
@@ -1286,7 +1286,7 @@ export declare interface IAdsControllerProvider {
 
 export declare interface IAdsPluginController {
   skipAd(): void;
-  playAdNow(adPod: KPAdPod): void;
+  playAdNow(adPod: TPAdPod): void;
   onPlaybackEnded(): Promise<void>;
   active: boolean;
   done: boolean;
@@ -1420,7 +1420,7 @@ declare interface IRemotePlayer {
   ads: any;
   /**
    * @readonly
-   * @type {KPOptionsObject}
+   * @type {TPOptionsObject}
    * @instance
    * @memberof IRemotePlayer
    */
@@ -1475,7 +1475,7 @@ declare interface IRemotePlayer {
    * @instance
    * @memberof IRemotePlayer
    */
-  getMediaConfig(): KPMediaConfig;
+  getMediaConfig(): TPMediaConfig;
   /**
    * @method
    * @param {Object} config
@@ -1650,9 +1650,9 @@ declare interface IRemotePlayer {
   isInVrStereoMode(): boolean;
 }
 
-export declare const KALTURA_PLAYER_START_TIME_QS: string;
+export declare const TASVIRCHI_PLAYER_START_TIME_QS: string;
 
-export declare class KalturaPlayer extends FakeEventTarget {
+export declare class TasvirchiPlayer extends FakeEventTarget {
   private static _logger;
   private _localPlayer;
   private _provider;
@@ -1680,19 +1680,19 @@ export declare class KalturaPlayer extends FakeEventTarget {
   private _serviceProvider;
   private _isVisible;
   private _autoPaused;
-  constructor(options: KalturaPlayerConfig);
+  constructor(options: TasvirchiPlayerConfig);
   loadMedia(mediaInfo: ProviderMediaInfoObject, mediaOptions?: SourcesConfig): Promise<any>;
-  setMedia(mediaConfig: KPMediaConfig): void;
+  setMedia(mediaConfig: TPMediaConfig): void;
   loadPlaylist(playlistInfo: ProviderPlaylistInfoObject, playlistConfig: PlaylistConfigObject): Promise<ProviderPlaylistObject>;
   loadPlaylistByEntryList(entryList: ProviderEntryListObject, playlistConfig: PlaylistConfigObject): Promise<ProviderPlaylistObject>;
   setPlaylist(playlistData: ProviderPlaylistObject, playlistConfig: PlaylistConfigObject, entryList?: ProviderEntryListObject): void;
-  configure(config?: Partial<KalturaPlayerConfig>): void;
-  updateKalturaPoster(playerSources: PKSourcesConfigObject, mediaSources: ProviderMediaConfigSourcesObject, dimensions: PKPlayerDimensions): void;
-  shouldAddKs(mediaConfig?: KPMediaConfig): boolean;
+  configure(config?: Partial<TasvirchiPlayerConfig>): void;
+  updateTasvirchiPoster(playerSources: PCSourcesConfigObject, mediaSources: ProviderMediaConfigSourcesObject, dimensions: PCPlayerDimensions): void;
+  shouldAddKs(mediaConfig?: TPMediaConfig): boolean;
   getMediaInfo(): ProviderMediaInfoObject;
-  getDrmInfo(): PKDrmDataObject | null;
-  getMediaConfig(): KPMediaConfig;
-  setSourcesMetadata(sourcesMetadata: PKMetadataConfigObject): void;
+  getDrmInfo(): PCDrmDataObject | null;
+  getMediaConfig(): TPMediaConfig;
+  setSourcesMetadata(sourcesMetadata: PCMetadataConfigObject): void;
   ready(): Promise<void>;
   load(): void;
   play(): void;
@@ -1779,8 +1779,8 @@ export declare class KalturaPlayer extends FakeEventTarget {
   get src(): string | null;
   get videoHeight(): number | null;
   get videoWidth(): number | null;
-  set dimensions(dimensions: PKPlayerDimensions);
-  get dimensions(): PKPlayerDimensions;
+  set dimensions(dimensions: PCPlayerDimensions);
+  get dimensions(): PCPlayerDimensions;
   get poster(): string;
   get ended(): boolean | null;
   set playbackRate(rate: number);
@@ -1790,9 +1790,9 @@ export declare class KalturaPlayer extends FakeEventTarget {
   get engineType(): string;
   get streamType(): string;
   get env(): any;
-  get selectedSource(): PKMediaSourceObject | null;
-  get sources(): PKSourcesConfigObject;
-  get config(): KalturaPlayerConfig;
+  get selectedSource(): PCMediaSourceObject | null;
+  get sources(): PCSourcesConfigObject;
+  get config(): TasvirchiPlayerConfig;
   get hasUserInteracted(): boolean;
   set loadingMedia(loading: boolean);
   get ads(): AdsController | undefined;
@@ -1805,12 +1805,12 @@ export declare class KalturaPlayer extends FakeEventTarget {
    * The playlist controller.
    * @type {PlaylistManager}
    * @instance
-   * @memberof KalturaPlayer
+   * @memberof TasvirchiPlayer
    * @example
-   * KalturaPlayer.playlist.playNext();
+   * TasvirchiPlayer.playlist.playNext();
    */
   get playlist(): PlaylistManager;
-  get Event(): KPEventTypes;
+  get Event(): TPEventTypes;
   get TextStyle(): typeof TextStyle;
   get ViewabilityType(): typeof ViewabilityType;
   get State(): typeof StateType;
@@ -1908,19 +1908,19 @@ export declare class KalturaPlayer extends FakeEventTarget {
   getMediaCapabilities(hevcConfig?: HEVCConfigObject): Promise<MediaCapabilitiesObject>;
 }
 
-export declare interface KalturaPlayerConfig {
+export declare interface TasvirchiPlayerConfig {
   targetId: string;
   log?: LogConfig;
   disableUserCache?: boolean;
-  text?: PKTextConfigObject;
+  text?: PCTextConfigObject;
   playback: PlaybackConfig;
-  sources: PKSourcesConfigObject;
+  sources: PCSourcesConfigObject;
   plugins: PluginsConfig;
   advertising: AdvertisingConfig;
-  session?: PKSessionConfigObject;
+  session?: PCSessionConfigObject;
   provider: ProviderOptionsObject;
   playlist?: PlaylistConfig;
-  dimensions?: PKDimensionsConfig;
+  dimensions?: PCDimensionsConfig;
   ui: UiConfig;
   cast?: {
     [key: string]: any;
@@ -1928,43 +1928,43 @@ export declare interface KalturaPlayerConfig {
   productVersion?: string;
   viewability: ViewabilityConfig;
   network?: NetworkConfig;
-  abr?: PKAbrConfigObject;
+  abr?: PCAbrConfigObject;
 }
 
 /**
- * @typedef {Object} KPAdBreakObject@typedef {Object} KPAdBreakObject
+ * @typedef {Object} TPAdBreakObject@typedef {Object} TPAdBreakObject
  * @property {number} position - The position, in seconds, to show the ad break.
  * @property {number} percentage - Alternative parameter to `position`. The position, in percentage of the media length, to show the ad break (optional).
  * @property {number} every - Alternative parameter to `position`. Play ad break every X seconds (optional).
- * @property {KPAdPod} ads - An array of ads to play (Ad pod).
+ * @property {TPAdPod} ads - An array of ads to play (Ad pod).
  */
-export declare type KPAdBreakObject = {
+export declare type TPAdBreakObject = {
   position: number;
   percentage?: number;
   every?: number;
-  ads: KPAdPod;
+  ads: TPAdPod;
 };
 
 /**
- * @typedef {Object} KPAdObject@typedef {Object} KPAdObject
+ * @typedef {Object} TPAdObject@typedef {Object} TPAdObject
  * @property {Array<string>} url - List of urls, each one specifies the ad tag url that is requested from the ad server. The player will request the first url, if failed, it will request the second url and so on (aka waterfalling).
  * @property {Array<string>} response - List of XMLs, each one specifies a VAST 2.0 document to be used as the ads response instead of making a request via an ad tag url. The player will use the first XML, if failed, it will use the second and so on (aka waterfalling).
  * @property {boolean} bumper - Specifies whether this is a bumper.
- * @property {KPAdPrebidConfig} prebid - Specifies whether this is a prebid ad and add the relevant config for prebid request.
+ * @property {TPAdPrebidConfig} prebid - Specifies whether this is a prebid ad and add the relevant config for prebid request.
  */
-export declare type KPAdObject = {
+export declare type TPAdObject = {
   url?: Array<string>;
   response?: Array<string>;
   bumper?: boolean;
-  prebid?: KPAdPrebidConfig;
+  prebid?: TPAdPrebidConfig;
 };
 
 /**
- * @typedef {Array<KPAdObject>} KPAdPod
+ * @typedef {Array<TPAdObject>} TPAdPod
  */
-export declare type KPAdPod = Array<KPAdObject>;
+export declare type TPAdPod = Array<TPAdObject>;
 
-export declare interface KPAdPrebidConfig {
+export declare interface TPAdPrebidConfig {
   adUnit: any;
   params?: Object;
   options?: Object;
@@ -1972,23 +1972,23 @@ export declare interface KPAdPrebidConfig {
 }
 
 /**
- * @typedef {Object} KPAdvertisingConfigObject@typedef {Object} KPAdvertisingConfigObject
- * @property {KPPrebidConfig} prebid - The prebid config.
- * @property {Array<KPAdBreakObject>} adBreaks - The ad breaks scheme.
+ * @typedef {Object} TPAdvertisingConfigObject@typedef {Object} TPAdvertisingConfigObject
+ * @property {TPPrebidConfig} prebid - The prebid config.
+ * @property {Array<TPAdBreakObject>} adBreaks - The ad breaks scheme.
  * @property {number} [playAdsAfterTime] - Only play ad breaks scheduled after this time (in seconds). This setting is strictly after - e.g. setting playAdsAfterTime to 15 will cause the player to ignore an ad break scheduled to play at 15s.
  * @property {boolean} [showAdBreakCuePoint] - Whether to show the ad breaks cue points.
- * @property {Object} [adBreakCuePointStyle] - Style options for the ad breaks cue points - See the options {@link https://github.com/kaltura/playkit-js-timeline/blob/main/docs/types.md#cuepointoptionsobject|Here}.
+ * @property {Object} [adBreakCuePointStyle] - Style options for the ad breaks cue points - See the options {@link https://github.com/tasvirchi/playchi-js-timeline/blob/main/docs/types.md#cuepointoptionsobject|Here}.
  */
-export declare type KPAdvertisingConfigObject = {
-  prebid?: KPPrebidConfig;
-  adBreaks: Array<KPAdBreakObject>;
+export declare type TPAdvertisingConfigObject = {
+  prebid?: TPPrebidConfig;
+  adBreaks: Array<TPAdBreakObject>;
   playAdsAfterTime?: number;
   showAdBreakCuePoint?: boolean;
   adBreakCuePointStyle?: Object;
 };
 
-export declare type KPEventTypes = {
-  Core: PKEventTypes;
+export declare type TPEventTypes = {
+  Core: PCEventTypes;
   UI: typeof UIEventType;
   Cast: typeof CastEventType;
   Playlist: typeof PlaylistEventType;
@@ -1996,12 +1996,12 @@ export declare type KPEventTypes = {
 };
 
 /**
- * @typedef {Object} KPMediaConfig@typedef {Object} KPMediaConfig
+ * @typedef {Object} TPMediaConfig@typedef {Object} TPMediaConfig
  * @property {ProviderMediaConfigSourcesObject} sources
  * @property {ProviderMediaConfigSessionObject} session
  * @property {{[plugin: string]: Object}} plugins
  */
-export declare interface KPMediaConfig extends PlaybackConfig {
+export declare interface TPMediaConfig extends PlaybackConfig {
   sources: ProviderMediaConfigSourcesObject;
   session?: ProviderMediaConfigSessionObject;
   plugins?: {
@@ -2010,38 +2010,38 @@ export declare interface KPMediaConfig extends PlaybackConfig {
 }
 
 /**
- * @typedef {Object} KPPlaylistItemConfigObject@typedef {Object} KPPlaylistItemConfigObject
- * @property {KPPlaylistCountdownOptions} [countdown] - Countdown options
+ * @typedef {Object} TPPlaylistItemConfigObject@typedef {Object} TPPlaylistItemConfigObject
+ * @property {TPPlaylistCountdownOptions} [countdown] - Countdown options
  */
-export declare type KPPlaylistItemConfigObject = {
+export declare type TPPlaylistItemConfigObject = {
   countdown?: PlaylistCountdownOptions;
 };
 
 /**
- * @typedef {Object} KPPlaylistObject@typedef {Object} KPPlaylistObject
+ * @typedef {Object} TPPlaylistObject@typedef {Object} TPPlaylistObject
  * @property {string} id - This is playlist's ID.
  * @property {ProviderPlaylistMetadataObject} metadata - This is the playlist metadata.
- * @property {KPPlaylistOptions} options - These are the playlist options.
- * @property {KPPlaylistCountdownOptions} countdown - This is the playlist countdown configuration.
+ * @property {TPPlaylistOptions} options - These are the playlist options.
+ * @property {TPPlaylistCountdownOptions} countdown - This is the playlist countdown configuration.
  * @property {Array<PlaylistItem>} items - These are the playlist items.
  */
-export declare interface KPPlaylistObject extends PlaylistConfigObject {
+export declare interface TPPlaylistObject extends PlaylistConfigObject {
   id?: string;
   metadata?: ProviderPlaylistMetadataObject;
   poster?: string;
 }
 
-export declare interface KPPrebidConfig extends KPAdPrebidConfig {
+export declare interface TPPrebidConfig extends TPAdPrebidConfig {
   libUrl: string;
 }
 
-export declare type KPThumbnailConfig = {
+export declare type TPThumbnailConfig = {
   thumbsSprite: string;
   thumbsWidth: number;
   thumbsSlices: number;
 };
 
-export declare interface LegacyPartialKPOptionsObject {
+export declare interface LegacyPartialTPOptionsObject {
   targetId: string;
   logLevel?: string;
   disableUserCache?: boolean;
@@ -2065,7 +2065,7 @@ export declare class LocalStorageManager extends BaseStorageManager {
    * @static
    * @returns {void}
    */
-  static attach(player: KalturaPlayer): void;
+  static attach(player: TasvirchiPlayer): void;
   /**
    * Gets the player text style from storage.
    * @private
@@ -2098,19 +2098,19 @@ export declare interface NetworkConfig {
   maxStaleLevelReloads: number;
 }
 
-export declare type PartialKPOptionsObject = Omit<KalturaPlayerConfig, 'productVersion'>;
+export declare type PartialTPOptionsObject = Omit<TasvirchiPlayerConfig, 'productVersion'>;
 
-export declare interface PKAdBreakOptions {
+export declare interface PCAdBreakOptions {
   type?: string;
   position?: number;
   numAds?: number;
 }
 
-export declare type PKAdBreakTypes = {
+export declare type PCAdBreakTypes = {
   [type: string]: string;
 };
 
-export declare interface PKAdOptions {
+export declare interface PCAdOptions {
   system?: string;
   url?: string;
   contentType?: string;
@@ -2133,11 +2133,11 @@ export declare interface PKAdOptions {
   wrapperAdSystems: Array<string>;
 }
 
-export declare type PKAdTagTypes = {
+export declare type PCAdTagTypes = {
   [type: string]: string;
 };
 
-export declare interface PlaybackConfig extends PKPlaybackConfigObject {
+export declare interface PlaybackConfig extends PCPlaybackConfigObject {
   autopause: boolean;
   loop: boolean;
 }
@@ -2148,12 +2148,12 @@ export declare const PLAYER_TYPE: string;
 
 /**
  * @class PlayerSnapshot
- * @param {KalturaPlayer} player -  The Kaltura player.
+ * @param {TasvirchiPlayer} player -  The Tasvirchi player.
  *
  */
 declare class PlayerSnapshot {
   mediaInfo: ProviderMediaInfoObject;
-  mediaConfig: KPMediaConfig;
+  mediaConfig: TPMediaConfig;
   /**
    * @type {TextStyle}
    * @instance
@@ -2172,14 +2172,14 @@ declare class PlayerSnapshot {
    * @memberof PlayerSnapshot
    */
   config: any;
-  constructor(player: KalturaPlayer);
+  constructor(player: TasvirchiPlayer);
 }
 
 export declare const playlist: {
   PlaylistEventType: {
-    readonly PLAYLIST_LOADED: "kaltura-player-playlistloaded";
-    readonly PLAYLIST_ITEM_CHANGED: "kaltura-player-playlistitemchanged";
-    readonly PLAYLIST_ENDED: "kaltura-player-playlistended";
+    readonly PLAYLIST_LOADED: "tasvirchi-player-playlistloaded";
+    readonly PLAYLIST_ITEM_CHANGED: "tasvirchi-player-playlistitemchanged";
+    readonly PLAYLIST_ENDED: "tasvirchi-player-playlistended";
   };
 };
 
@@ -2199,7 +2199,7 @@ export declare interface PlaylistConfigObject {
 }
 
 /**
- * @typedef {Object} KPPlaylistCountdownOptions@typedef {Object} KPPlaylistCountdownOptions
+ * @typedef {Object} TPPlaylistCountdownOptions@typedef {Object} TPPlaylistCountdownOptions
  * @property {number} [timeToShow] - Shows when the countdown is scheduled to appear (by default, this is towards the end).
  * @property {number} [duration=10] - Shows for how long the countdown will appear.
  * @property {boolean} [showing=true] - Determines whether to show the countdown.
@@ -2220,7 +2220,7 @@ export declare interface PlaylistCountdownOptions {
  * 3. PLAYLIST_ENDED
  * @example
  * // How to use
- * player.addEventListener(KalturaPlayer.playlist.PlaylistEventType.PLAYLIST_LOADED, e => {
+ * player.addEventListener(TasvirchiPlayer.playlist.PlaylistEventType.PLAYLIST_LOADED, e => {
  *   console.log(e.payload.playlist.metadata.name);
  * };
  */
@@ -2230,35 +2230,35 @@ declare const PlaylistEventType: {
    * @event PLAYLIST_LOADED
    * @memberof PlaylistEventType
    */
-  readonly PLAYLIST_LOADED: "kaltura-player-playlistloaded";
+  readonly PLAYLIST_LOADED: "tasvirchi-player-playlistloaded";
   /**
    * Fires when a playlist item start to changed.
    * @event PLAYLIST_ITEM_CHANGED
    * @memberof PlaylistEventType
    */
-  readonly PLAYLIST_ITEM_CHANGED: "kaltura-player-playlistitemchanged";
+  readonly PLAYLIST_ITEM_CHANGED: "tasvirchi-player-playlistitemchanged";
   /**
    * Fires when the playlist has finished.
    * @event PLAYLIST_ENDED
    * @memberof PlaylistEventType
    */
-  readonly PLAYLIST_ENDED: "kaltura-player-playlistended";
+  readonly PLAYLIST_ENDED: "tasvirchi-player-playlistended";
 };
 
 /**
  * @class PlaylistItem
- * @param {PKSourcesConfigObject} [sources] - The item sources
- * @param {KPPlaylistItemConfigObject} [config] - The item config
+ * @param {PCSourcesConfigObject} [sources] - The item sources
+ * @param {TPPlaylistItemConfigObject} [config] - The item config
  */
 declare class PlaylistItem {
   private _sources;
   private _config;
   private _plugins;
   private _index;
-  constructor(sources: SourcesConfig, config: KPPlaylistItemConfigObject, index: number);
+  constructor(sources: SourcesConfig, config: TPPlaylistItemConfigObject, index: number);
   /**
    * Update the playlist item sources
-   * @param {PKSourcesConfigObject} sourcesObject - The sources
+   * @param {PCSourcesConfigObject} sourcesObject - The sources
    * @returns {void}
    * @instance
    * @memberof PlaylistItem
@@ -2266,7 +2266,7 @@ declare class PlaylistItem {
   updateSources(sourcesObject: SourcesConfig): void;
   /**
    * Update the playlist item plugins (e.g. bumper from BE)
-   * @param {KPPluginsConfigObject} pluginsObject - The plugins
+   * @param {TPPluginsConfigObject} pluginsObject - The plugins
    * @returns {void}
    * @instance
    * @memberof PlaylistItem
@@ -2274,21 +2274,21 @@ declare class PlaylistItem {
   updatePlugins(pluginsObject: PluginsConfig): void;
   /**
    * Playlist item sources
-   * @type {?PKSourcesConfigObject}
+   * @type {?PCSourcesConfigObject}
    * @instance
    * @memberof PlaylistItem
    */
   get sources(): SourcesConfig;
   /**
    * Playlist item config
-   * @type {?KPPlaylistItemConfigObject}
+   * @type {?TPPlaylistItemConfigObject}
    * @instance
    * @memberof PlaylistItem
    */
-  get config(): KPPlaylistItemConfigObject;
+  get config(): TPPlaylistItemConfigObject;
   /**
    * Playlist item plugins
-   * @type {KPPluginsConfigObject}
+   * @type {TPPluginsConfigObject}
    * @instance
    * @memberof PlaylistItem
    */
@@ -2310,8 +2310,8 @@ declare class PlaylistItem {
 
 /**
  * @class PlaylistManager
- * @param {KalturaPlayer} player - The player instance
- * @param {KPOptionsObject} options - The player config object
+ * @param {TasvirchiPlayer} player - The player instance
+ * @param {TPOptionsObject} options - The player config object
  */
 declare class PlaylistManager {
   private static _logger;
@@ -2323,20 +2323,20 @@ declare class PlaylistManager {
   private _playerOptions;
   private _mediaInfoList;
   private _appPluginConfig;
-  constructor(player: KalturaPlayer, options: KalturaPlayerConfig);
+  constructor(player: TasvirchiPlayer, options: TasvirchiPlayerConfig);
   /**
    * Config the playlist
-   * @param {KPPlaylistObject} [config] - The playlist config
+   * @param {TPPlaylistObject} [config] - The playlist config
    * @param {ProviderEntryListObject} [entryList] - Entry list
    * @returns {void}
    * @instance
    * @memberof PlaylistManager
    */
-  configure(config: KPPlaylistObject, entryList?: ProviderEntryListObject): void;
+  configure(config: TPPlaylistObject, entryList?: ProviderEntryListObject): void;
   /**
    * Load a playlist
-   * @param {KPPlaylistObject} playlistData - The playlist data
-   * @param {KPPlaylistConfigObject} [playlistConfig] - The playlist config
+   * @param {TPPlaylistObject} playlistData - The playlist data
+   * @param {TPPlaylistConfigObject} [playlistConfig] - The playlist config
    * @param {ProviderEntryListObject} [entryList] - Entry list
    * @returns {void}
    * @instance
@@ -2423,14 +2423,14 @@ declare class PlaylistManager {
   get poster(): string | undefined;
   /**
    * Playlist countdown
-   * @type {KPPlaylistCountdownOptions}
+   * @type {TPPlaylistCountdownOptions}
    * @instance
    * @memberof PlaylistManager
    */
   get countdown(): PlaylistCountdownOptions;
   /**
    * Playlist options
-   * @type {KPPlaylistOptions}
+   * @type {TPPlaylistOptions}
    * @instance
    * @memberof PlaylistManager
    */
@@ -2445,7 +2445,7 @@ declare class PlaylistManager {
 }
 
 /**
- * @typedef {Object} KPPlaylistOptions@typedef {Object} KPPlaylistOptions
+ * @typedef {Object} TPPlaylistOptions@typedef {Object} TPPlaylistOptions
  * @property {boolean} [autoContinue=true] - Determines whether to continue to the next item automatically.
  * @property {boolean} [loop=false] - Determines whether to play the playlist in a loop. When selected, the playlist will play automatically even if autoContinue is set to false.
  * @property {string} [startAtEntryId] - Determines which entry id to start to the play the playlist from.
@@ -2459,7 +2459,7 @@ export declare interface PlaylistOptions {
 }
 
 export declare interface PluginClassType {
-  new (name: string, player: KalturaPlayer, config?: any): BasePlugin;
+  new (name: string, player: TasvirchiPlayer, config?: any): BasePlugin;
   defaultConfig: any;
   isValid: () => boolean;
 }
@@ -2623,7 +2623,7 @@ declare class RemoteConnectedPayload extends RemotePayload {
 
 /**
  * @class RemoteControl
- * @param {KalturaPlayer} player - The Kaltura player.
+ * @param {TasvirchiPlayer} player - The Tasvirchi player.
  */
 declare class RemoteControl {
   static _logger: any;
@@ -2687,7 +2687,7 @@ declare class RemoteControl {
    * @instance
    */
   onRemoteDeviceConnectFailed: () => void;
-  constructor(player: KalturaPlayer);
+  constructor(player: TasvirchiPlayer);
 }
 
 /**
@@ -2729,7 +2729,7 @@ declare class RemotePlayerManager {
   private static _logger;
   private _remotePlayers;
   static register(type: string, remotePlayer: BaseRemotePlayer): void;
-  load(castConfig: any, player: KalturaPlayer): void;
+  load(castConfig: any, player: TasvirchiPlayer): void;
   startCasting(type?: string): Promise<any>;
   isCastAvailable(type?: string): boolean;
   destroy(): void;
@@ -2838,16 +2838,16 @@ export declare class SessionStorageManager extends BaseStorageManager {
    * @static
    * @returns {void}
    */
-  static attach(player: KalturaPlayer): void;
+  static attach(player: TasvirchiPlayer): void;
 }
 
 /**
- * Setup the Kaltura Player.
- * @param {PartialKPOptionsObject|LegacyPartialKPOptionsObject} options - partial kaltura player options
+ * Setup the Tasvirchi Player.
+ * @param {PartialTPOptionsObject|LegacyPartialTPOptionsObject} options - partial tasvirchi player options
  * @private
- * @returns {KalturaPlayer} - The Kaltura Player.
+ * @returns {TasvirchiPlayer} - The Tasvirchi Player.
  */
-declare function setup_2(options: PartialKPOptionsObject): KalturaPlayer;
+declare function setup_2(options: PartialTPOptionsObject): TasvirchiPlayer;
 export { setup_2 as setup }
 
 export declare interface SourcesConfig extends Omit<ProviderMediaConfigSourcesObject, 'poster'> {
@@ -2901,40 +2901,40 @@ declare class UIWrapper {
   private _uiManager;
   private readonly _disabled;
   private _player;
-  constructor(player: KalturaPlayer, options: KalturaPlayerConfig);
+  constructor(player: TasvirchiPlayer, options: TasvirchiPlayerConfig);
   destroy(): void;
   reset(): void;
   setConfig(config: any, componentAlias?: string): void;
   /**
    * Add a component dynamically
    *
-   * @param {KPUIAddComponent} component - The component to add
+   * @param {TPUIAddComponent} component - The component to add
    * @returns {Function} - Removal function
    */
-  addComponent(component: KPUIAddComponent): () => void;
+  addComponent(component: TPUIAddComponent): () => void;
   /**
    * Remove a component dynamically
    *
-   * @param {KPUIRemoveComponent} component - The component to remove
+   * @param {TPUIRemoveComponent} component - The component to remove
    * @returns {Function} - Undo removal function
    */
-  removeComponent(component: KPUIRemoveComponent): () => void;
+  removeComponent(component: TPUIRemoveComponent): () => void;
   get store(): any;
   /**
-   * Deprecated - left for backward compatibility - use instead registerService in KalturaPlayer
+   * Deprecated - left for backward compatibility - use instead registerService in TasvirchiPlayer
    * @param {string} name - the manager name
    * @param {Object} manager - the manager object
    * @returns {void}
    */
   registerManager(name: string, manager: any): void;
   /**
-   * Deprecated - left for backward compatibility - use instead getService in KalturaPlayer
+   * Deprecated - left for backward compatibility - use instead getService in TasvirchiPlayer
    * @param {string} name - the manager name
    * @returns {Object} - the manager object
    */
   getManager(name: string): any | void;
   /**
-   * Deprecated - left for backward compatibility - use instead hasService in KalturaPlayer
+   * Deprecated - left for backward compatibility - use instead hasService in TasvirchiPlayer
    * @param {string} name - the manager name
    * @returns {boolean} - if the manager exist
    */

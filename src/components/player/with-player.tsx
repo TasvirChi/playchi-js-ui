@@ -1,8 +1,8 @@
 import {h, Component, ComponentType} from 'preact';
-import {KalturaPlayer} from '@playkit-js/kaltura-player-js';
+import {TasvirchiPlayer} from '@playchi-js/tasvirchi-player-js';
 
 export type WithPlayerProps = {
-  player?: KalturaPlayer;
+  player?: TasvirchiPlayer;
 };
 
 /**
